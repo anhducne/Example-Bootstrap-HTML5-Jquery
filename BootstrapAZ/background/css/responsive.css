@@ -1,0 +1,32 @@
+/* Ipad ngang (1024 x 768) */
+@media screen and (max-width: 1024px){
+  
+}
+/* Ipad dọc (768 x 1024) */
+@media screen and (max-width: 768px){
+  
+}
+
+@media screen and (max-width: 600px){
+   
+    #icon_header{display: block; color: red;}
+  
+}
+/* Tablet nhỏ (480 x 640) */
+@media screen and (max-width: 480px){
+   
+    
+    /* còn con này thì nó kiểu khi mà thiết bị có width cao nhất là 480 thì cái content và sidebar 
+    sẽ tự động nở ra 100% và ko nằm trên cùng 1 khung nữa thì cái nội dung trong 2 con sẽ ko bị vỡ
+    khi mà kích thước thiết bị nhỏ lại  */
+}
+/* Iphone (480 x 640) */
+@media screen and (max-width: 375px){
+   
+}
+/* Smart phone nhỏ */
+@media screen and (max-width: 240px){
+}
+
+
+

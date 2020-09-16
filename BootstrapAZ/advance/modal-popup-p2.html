@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>grid-layout</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center text-success">Modal Bootstrap</h1>
+                <!-- kich hoạt modal  -->
+                <button class="btn btn-primary" data-toggle="modal" data-target="#demo-modal">Show modal</button>
+                <a href="" id="run-modal">Click To Open modal</a>
+                <!-- ở đây ta có data-toggle="modal" để toggle cái popup lên còn con data-target="#demo-modal" thì nó sẽ link đến cái id của nội dung popup  -->
+                <!-- cấu trúc modal  -->
+                <div class="modal fade" id="demo-modal">
+                    <!-- modal khai báo classs cho boostrap và fade là để hiệu ứng khi bật ra cho mượt, id=demo-modal để con data-target link đến  -->
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+                       <!-- 1. modal-dialog-scrollable : nếu cái text trong modal quá dài ==> tạo 1 cái scroll -->
+                       <!-- 2. modal-dialog-centered : căn modal ra giữa màn hình  -->
+                       <!-- 3. modal-xl, modal-sm : cho cái modal to hoặc nhỏ  -->
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Demo modal Unitop</h5>
+                                <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                                <!-- tạo một cái nút close và nó data-dismiss="modal" sẽ làm việc tắt cái popup đó đi và cái button này là 1 cái chữ X với mã là &times;  -->
+                            </div>
+                            <!-- end header  -->
+                            <div class="modal-body">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, atque.</p>
+                                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ad esse ab ipsam
+                                    quaerat repudiandae quia reprehenderit labore laborum at praesentium necessitatibus
+                                    nisi eius excepturi, voluptatem quasi! Quis voluptas natus iste tempora nihil odio
+                                    suscipit eveniet quia vitae in corporis, nobis accusamus ab. Aliquam ipsam
+                                    voluptatum explicabo error sint aut, deleniti excepturi incidunt doloremque ipsa,
+                                    quo ad reiciendis beatae, quaerat modi vitae laboriosam porro veritatis. Animi,
+                                    eveniet? Ea, rem unde repellat doloribus odit culpa sint veritatis ipsa nam delectus
+                                    id aliquid ut exercitationem recusandae, consequuntur totam possimus. At nostrum aut
+                                    sequi id et, mollitia nemo veniam nulla. Mollitia, sequi! Ut totam reiciendis
+                                    eveniet, provident dolores numquam accusantium modi quibusdam nostrum! Nihil,
+                                    delectus modi. Consequatur dignissimos quaerat laborum perspiciatis sed, debitis
+                                    asperiores quos sapiente maxime eos vero, temporibus rem at corporis impedit fugit
+                                    nostrum veritatis, reprehenderit eius hic minima architecto error assumenda. Iusto
+                                    eligendi voluptates, tempora optio quidem ad asperiores dolore ratione nihil unde
+                                    vitae cumque excepturi rem nisi reprehenderit inventore quas fugit magnam a facere
+                                    voluptas hic ducimus! Qui sit, non laboriosam facilis fugiat maxime esse inventore
+                                    quis culpa consequatur rem distinctio pariatur placeat, tempore animi corrupti
+                                    cupiditate obcaecati. Molestias illum rem, nam tempore porro delectus nihil facere
+                                    minus fuga rerum soluta ad asperiores hic aliquam velit vitae explicabo culpa
+                                    expedita. Voluptate ad consectetur ipsum minus, fugiat amet vitae debitis aliquid
+                                    quam illo dolore placeat rerum eaque. Maiores beatae ipsam harum dicta eius, saepe
+                                    ratione. Quisquam, excepturi! Fugiat impedit hic, suscipit nam quos iure, accusamus
+                                    laudantium saepe a voluptas quisquam sint non repellat est corporis? Inventore illum
+                                    blanditiis quo voluptatum consectetur distinctio, quisquam voluptatem soluta quis
+                                    dolore aperiam temporibus dolorum rerum ratione vitae fuga nemo nam similique
+                                    officia numquam consequuntur sed. Adipisci, quia facere necessitatibus ipsa alias
+                                    culpa officia deserunt nesciunt iusto reiciendis ducimus, quo quae maiores vero nam
+                                    accusantium.</p> -->
+                             <div class="container">
+                                 <div class="row">
+                                    <div class="col-12"><div class="bg-primary">Col-12</div></div>
+                                    <div class="col-6"><div class="bg-primary">col-6</div></div>
+                                    <div class="col-6"><div class="bg-primary">col-6</div></div>
+                                 </div>
+                             </div>
+                             <!-- 4. có thể tạo ra lưới trong modal  -->
+                            </div>
+                            <!-- end body  -->
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                <!-- tương tự ở trên con này là đóng  -->
+                                <button class="btn btn-primary">Lưu</button>
+                            </div>
+                            <!-- end footer  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+        <script>
+            $(document).ready(function(){
+                 $('#run-modal').click(function(){
+                      $('#demo-modal').modal();
+                    return false;  
+                 });
+                //  $('#demo-modal').on('show.bs.modal', function(){
+                //       alert("Arlert trước khi hiện modal");
+                //  });
+
+                //  $('#demo-modal').on('shown.bs.modal', function(){
+                //       alert("Arlert sau khi hiện modal");
+                //  });
+
+                //  $('#demo-modal').on('hide.bs.modal', function(){
+                //       alert("Arlert trước khi ẩn modal");
+                //  });
+
+                 $('#demo-modal').on('hidden.bs.modal', function(){
+                      alert("Arlert sau khi ẩn modal");
+                 });
+            });
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

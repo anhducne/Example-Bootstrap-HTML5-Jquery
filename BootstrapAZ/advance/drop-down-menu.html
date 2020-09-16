@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>grid-layout</title>
+  </head>
+  <style>
+      #my-dropdown .dropdown-menu{
+          width: 300px;
+      }
+  </style>
+  <body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Dropdowwn Menu Bootstrap</h1>
+        <!-- dưới đây là cách tạo 1 nút phụt ra  -->
+        <div class="dropdown float-right" id="my-dropdown">
+            
+            <button class="btn btn-primary dropdown-toggle" data-display="static" data-toggle="dropdown">Avatar</button>
+      <!-- thì là nó sẽ hoạt động đẩy menu ra bằng cách thêm cái thuộc tính data-toggle ở phía dưới thì nó tạo 1 cái div chứa các thuộc tính con -->
+            <div class="dropdown-menu dropdown-menu-right">
+                <!-- cái dropdown-menu-right dùng respond được cú pháp dropdown-menu-md-right -->
+      <!-- cái mà dropdown-menu-right là set cái menu phụt ra nó căn về phía trái hay phải kết hợp với datadisplay static để dễ hiển thị hơn -->
+                <a href="" class="dropdown-item">Menu item 1</a>
+                <a href="" class="dropdown-item">Menu item 2</a>
+                <a href="" class="dropdown-item">Menu item 3</a>
+                <div class="dropdown-divider"></div>
+                <!-- cái divider này là tạo 1 đường ngăn giữa 2 cái menu rất đẹp  -->
+                <div class="dropdown-header">More-menu</div>
+                <a href="" class="dropdown-item">Menu item 4</a>
+                <a href="" class="dropdown-item">Menu item 5</a>
+                <div class="dropdown-divider"></div>
+                <p class="p-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, nesciunt?</p>
+
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+<script>
+    $(document).ready(function(){
+$('#my-dropdown').on('show.bs.dropdown',function(){
+    alert("Người dùng vừa bấm vào Avatar");
+});
+// cái này như kiểu bắt sự kiện người dùng bấm vào avatarr thì làm gì bla ble 
+$('#my-dropdown').on('hide.bs.dropdown',function(){
+    alert("Người dùng vừa bấm ngoài vùng để thoát Avatar");
+});
+// cái này như kiểu bắt sự kiện người dùng bấm ra ngoài avatarr thì làm gì bla ble 
+    });
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

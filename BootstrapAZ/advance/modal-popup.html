@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>grid-layout</title>
+  </head>
+  <body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-success">Modal Bootstrap</h1>
+    <!-- kich hoạt modal  -->
+<button class="btn btn-primary" data-toggle="modal" data-target="#demo-modal">Show modal</button>
+<!-- ở đây ta có data-toggle="modal" để toggle cái popup lên còn con data-target="#demo-modal" thì nó sẽ link đến cái id của nội dung popup  -->
+    <!-- cấu trúc modal  -->
+     <div class="modal fade" id="demo-modal">
+         <!-- modal khai báo classs cho boostrap và fade là để hiệu ứng khi bật ra cho mượt, id=demo-modal để con data-target link đến  -->
+         <div class="modal-dialog">
+             <div class="modal-content">
+                 <div class="modal-header">
+                <h5 class="modal-title">Demo modal Unitop</h5>
+            <button class="close" data-dismiss="modal"><span>&times;</span></button>
+<!-- tạo một cái nút close và nó data-dismiss="modal" sẽ làm việc tắt cái popup đó đi và cái button này là 1 cái chữ X với mã là &times;  -->
+                 </div>
+                 <!-- end header  -->
+                 <div class="modal-body">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, atque.</p>
+                 </div>
+                 <!-- end body  -->
+                 <div class="modal-footer">
+                 <button class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                 <!-- tương tự ở trên con này là đóng  -->
+                 <button class="btn btn-primary">Lưu</button>
+                </div>
+                 <!-- end footer  -->
+             </div>
+         </div>
+     </div>
+        </div>
+    </div>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

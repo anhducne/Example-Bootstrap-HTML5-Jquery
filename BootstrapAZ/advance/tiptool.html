@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>grid-layout</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Tooltip trong bootstrap</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo molestias aut nulla dolores explicabo
+                    accusantium mollitia, voluptatum quaerat quod fugit, possimus magnam corrupti, hic error sed eum.
+                    Nam, eos quasi!</p>
+                <p>Lorem ipsum dolor sit amet. <a href="" data-toggle="tooltip" title="Đây là tool tip về anh đức ">Anh Đức </a>Đẹp trai vãi lồn </p>    
+            <!-- thì nếu như chỉ để cái tooltip không như thế này thì nó ko kích hoạt đc mà mình phải kích hoạt bằng jquery  -->
+                    <h1 class="text-center">Hiển thị top data-placement="top"</h1>
+            <p>Lorem ipsum dolor sit amet. <a href="" data-toggle="tooltip" data-placement="top" title="Đây là tool tip về anh đức ">Anh Đức </a>Đẹp trai vãi lồn </p>    
+            <h1 class="text-center">Hiển thị top data-placement="bottom"</h1>
+            <p>Lorem ipsum dolor sit amet. <a href="" data-toggle="tooltip" data-placement="bottom" title="Đây là tool tip về anh đức ">Anh Đức </a>Đẹp trai vãi lồn </p>    
+            <h1 class="text-center">Hiển thị top data-placement="left"</h1>
+            <p>Lorem ipsum dolor sit amet. <a href="" data-toggle="tooltip" data-placement="left" title="Đây là tool tip về anh đức ">Anh Đức </a>Đẹp trai vãi lồn </p>    
+            <h1 class="text-center">Hiển thị top data-placement="right"</h1>
+            <p>Lorem ipsum dolor sit amet. <a href="" data-toggle="tooltip" data-placement="right" title="Đây là tool tip về anh đức ">Anh Đức </a>Đẹp trai vãi lồn </p>     
+        </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"crossorigin="anonymous"></script>
+        
+
+
+        <script>
+            $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip({
+            //  đây nè phải có cái này nó ms kích hoạt cái tooltip mà cái [] đặt trong [] có nghĩa là tất cả các thuộc tính mà có cía data-toggle ấy đều nhận đc js này
+                //   placement:'top',   // hiển thị top, bottom, left, right
+                  trigger:'hover focus',  // mình cũng ko rõ chức năng của nó 
+                  html : true,  // cái này có nghĩa là mình sử dụng html tag vào cái title ấy được 
+        });
+            });
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

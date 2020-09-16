@@ -1,0 +1,68 @@
+
+  .buy {
+    color: red;
+    border: 1px solid red;
+    transition: 0.5s;
+  }
+
+  .buy:hover {
+    color: white;
+    background: red;
+    border: 1px solid red;
+    transition: 0.5s;
+  }
+
+  .item {
+    border: 1px solid #9c9c9c;
+  }
+
+  .contact {
+    width: 150px;
+    color: white;
+    background: green;
+    top: 600px;
+    right: 0;
+  }
+
+  /* tạo menu repondsive  */
+  #respon_menu {
+   background: #444;
+   width: 250px;
+   color: #f5f5f5;
+   position: absolute;
+   top: 0px;
+   left: -250px;
+   height: 100%;
+   transition: left 0.25s;
+  }
+  
+  #respon_menu_header h1{
+    font-size: 1.5rem;
+    
+  }
+
+  #respon_menu .list{
+    list-style: none;
+  }
+  #respon_menu .list li{
+    padding: 15px 47px;
+    color: #f5f5f5;
+    border-top: 1px solid #ffc9c9;
+}
+  #icon_header {
+    text-decoration: none;
+    display: none; 
+    color: #f5f5f5;
+    font-size: 20px;
+    position: absolute;
+    right: -37px;
+    top: 15px;
+    cursor: pointer;
+  }
+
+  #site.open-respon-menu #respon_menu{
+    /* chỉ đến id site có classs openresspond và áp dụng cho idresponmenu */
+    
+        left: 0px;
+        transition: left 0.25s;
+    }
