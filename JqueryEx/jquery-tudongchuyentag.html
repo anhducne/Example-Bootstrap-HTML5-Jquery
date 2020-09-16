@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Học web chuẩn</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(function(){
+  var myFnc = function() {  // tạo một biến my fnc có hàm 
+    var elmLast = $('.list li').last(); // trong đó tạo một biến trỏ tới phần tử cuối cùng của thẻ .list li
+    $('.list').prepend(elmLast); // sau đó chuyển con cuois lên trên cùng 
+  }
+  setInterval(myFnc, 1000); // set cái thuộc tính cho biến myFnc cứ 1s chạy một lần thì nó sẽ đổi vị trí  1000ms =1s
+});
+</script>
+</head>
+
+<body>
+  <ul class="list">
+    <li>item 01</li>
+    <li>item 02</li>
+    <li>item 03</li>
+    <li>item 04</li>
+    <li>item 05</li>
+    <li>item 06</li>
+    <li>item 07</li>
+  </ul>
+</body>
+</html>

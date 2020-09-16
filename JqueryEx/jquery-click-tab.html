@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Học web chuẩn</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .tab-list li {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    padding: 5px 10px;
+  }
+  .tab-content {
+    border: 3px solid #eee;
+    height: 200px;
+    margin-top: 5px;
+    padding: 10px;
+    width: 600px;
+  }
+  .box {
+    display: none;
+  }
+</style>
+<script>
+$(function(){
+  /* Viết code ở đây ↓ */
+        $('.box:eq(0)').show(); // cho box đầu tiên hiển thị 
+        $('.tab-list li').click(function(){
+            // xác định phần tử thứ n được click //
+            var n = $('tab-list li').index(this);
+            // ẩn tất cả các box //
+            $('.box').hide();
+            // hiển thị .box theo phần tử thứ n //
+            $('.box:eq('+ n +')').fadeIn(300);
+            
+                    });
+});
+</script>
+</head>
+
+<body>
+  <ul class="tab-list">
+    <li>Tab 01</li>
+    <li>Tab 02</li>
+    <li>Tab 03</li>
+  </ul>
+  <div class="tab-content">
+    <div class="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    <div class="box">Sed porttitor turpis risus, vitae sodales neque vulputate ut.</div>
+    <div class="box">In suscipit nec velit sit amet convallis. Integer.</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JQuery-Css/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="JQuery-Css/reset.css">
+</head>
+<body>
+    <style>
+        form *{
+            display: block;
+            margin: 10px 10px;
+        }
+    </style>
+    <script>
+   $(document).ready(function(){
+    
+     $("#form_calacl").submit(function(){
+          var so_a = $("#a_type").val();
+          var so_b = $("#b_type").val();
+
+       if(so_a>so_b){
+              alert(so_a +" Lớn Hơn "+so_b);
+       }
+       if(so_a==so_b){
+              alert(so_a +" Bằng "+so_b);
+       }
+       else{
+             alert(so_a+"Nhỏ Hơn"+so_b);
+       }
+          return false;
+     });
+
+   });
+    </script>
+
+
+    <form action="" method="POST" id="form_calacl">
+        <label for="a_type">Nhập số a</label>
+        <input type="number" name="a_type" id="a_type">
+        <label for="b_type">Nhập số b</label>
+        <input type="number" name="b_type" id="b_type">
+        <input type="submit" id="submit" name="sm-submit">
+        
+    </form>
+</body>
+</html>

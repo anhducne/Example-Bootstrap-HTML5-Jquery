@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Học web chuẩn</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script>
+
+ $(document).ready(function(){
+      $('button#them').click(function(event){
+                var elm = $('.box:eq(0)').clone(); // copy phần tử đầu tiên 
+                $('.box').last().after(elm); // thêm phần copy vào sau phần tử cuối  
+
+      });
+      $('button#xoa').click(function(){
+          $('.box:gt(0)').last().remove();
+      });
+ });
+</script>
+</head>
+
+<body>
+<div class="box">
+  <h3>Box title</h3>
+  <ul class="list">
+    <li>item 01</li>
+    <li>item 02</li>
+    <li>item 03</li>
+    <li>item 04</li>
+    <li>item 05</li>
+    <li>item 06</li>
+    <li>item 07</li>
+  </ul>
+</div>
+<button type="button" id="them">Add</button> <br>
+<button type="button" id="xoa">xóa</button>
+</body>
+</html>

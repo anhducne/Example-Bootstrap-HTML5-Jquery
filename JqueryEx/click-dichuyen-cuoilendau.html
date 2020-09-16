@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Học web chuẩn</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(function(){
+  $('#change').click(function() {
+    var elmLast = $('.list li').last(); // trỏ tới con cuối cùng
+    $('.list').prepend(elmLast); // trỏ vào thẻ list và dùng prepend để của con trong biến lên đầu của list
+  });
+});
+</script>
+</head>
+
+<body>
+  <ul class="list">
+    <li>item 01</li>
+    <li>item 02</li>
+    <li>item 03</li>
+    <li>item 04</li>
+    <li>item 05</li>
+    <li>item 06</li>
+    <li>item 07</li>
+  </ul>
+  <button type="button" id="change">Change</button>
+</body>
+</html>

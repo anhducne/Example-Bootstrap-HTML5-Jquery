@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Học web chuẩn</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script>
+    // Cho một cấu trúc HTML như bên dưới, khi click button sẽ thay đổi nội dung text của div.
+
+  $(function(){
+      // mình làm 
+    //   $("#submit").click(function(){
+    //             $("#text").text("Hello mother fucker");
+    //   });
+      // họ làm
+  $('button').click(function() {
+    $('div').text('Bạn đã làm bài tập chưa?');
+
+});
+
+});
+</script>
+</head>
+
+<body>
+<div id="text">In suscipit nec velit sit amet convallis. Integer</div>
+<button type="button" id="submit">Click</button>
+</body>
+</html>

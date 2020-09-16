@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Học web chuẩn</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script>
+  $(function(){
+   var larger = function(x,y){
+       if(x>y){
+           return x;
+        } else return y;
+   };
+     $('input').change(function(){
+         var a = $("#nameA").val();
+         var b = $("#nameB").val();
+        var result = $('#result');
+        result.text(larger(a,b));
+     });
+  });
+</script>
+</head>
+
+<body>
+<input type="text" id="nameA" value="0"> <input type="text" id="nameB" value="0">
+<div>Max: <span id="result"></span></div>
+</body>
+</html>

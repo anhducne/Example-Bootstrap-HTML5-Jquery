@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JQuery-css/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <script>
+          $(document).ready(function(){
+              $("#add").click(function(){
+                  $('#list').append("<li>new item </li>");  // thì cái này nó link tới list và nó tạo ra cái item mới thẻ li mới 
+              });
+              $("#remove").click(function(){
+                  $('#list li').last().remove(); // con này thì nó cần phải truy cập tới thẻ li để xóa từng con thẻ li ở last và remove dần 
+              });
+});
+    </script>
+
+    <ul id="list">
+           <li>Item 1</li>
+           <li>Item 2</li>
+           <li>Item 3</li>
+           <li>Item 4</li>
+           <li>Item 5</li>
+           <li>Item 6</li>
+           <li>Item 7</li>
+           <li>Item 8</li>
+           <li>Item 9</li>
+    </ul>
+    <button type="button" id="remove">Remove</button> <br>
+    <button type="button" id="add">Add</button>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Học web chuẩn</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script>
+  $(function(){
+    /* Code viết ở đây ↓ */
+       $("button").click(function(){
+       $("#box").text(function(){
+              $("#box h3#title").html('<h1>dit mie</h1>')
+            
+          });
+      });
+
+//       $('button').click(function() {
+//     $('#box').html(
+//       '<ul>'
+//       + '<li>Canh chua cá kho.</li>'
+//       + '<li>Bí xào bò.</li>'
+//       + '<li>Bí đỏ hầm đuôi heo.</li>'
+//       + '<li>Sườn non kho ớt.</li>'
+//       + '</ul>'
+//       );
+//   });
+  });
+</script>
+</head>
+
+<body>
+<div id="box">
+  <h3 id="title">Title</h3>
+  <div>In suscipit nec velit sit amet convallis. Integer</div>
+</div>
+<button type="button">Click</button>
+</body>
+</html>

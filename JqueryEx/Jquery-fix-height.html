@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Học web chuẩn</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    list-style: none;
+  }
+  body {
+    color: #383838;
+    font-family: Helvetica,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .clearfix {
+    zoom: 1;
+  }
+  .clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+  }
+  .list li {
+    border: 1px solid #ccc;
+    float: left;
+    padding: 10px;
+    width: 300px;
+  }
+</style>
+<script>
+  $(function(){
+    /* Code viết ở đây ↓ */
+       var a = $('.list li').first();
+       var b = $('.list li').last();
+       var height_a = a.height();
+       var height_b = b.height();
+          
+          if(height_a>height_b){
+              b.height(height_a);
+          } else {
+              a.height(height_b);
+          };
+  });
+</script>
+</head>
+
+<body>
+  <ul class="list">
+    <li>orem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+Sed id urna facilisis, fringilla ex nec, gravida est.</li>
+    <li>Praesent id porta turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+Nam elit sapien, fringilla a turpis vel, pretium molestie nisi.<br>
+Donec efficitur, quam eu auctor blandit,</li>
+  </ul>
+</body>
+</html>

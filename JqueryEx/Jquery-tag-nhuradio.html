@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Học web chuẩn</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<style>
+  li {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+  li.checked {
+    background-color: #e9ed00;
+  }
+</style>
+<script>
+$(function(){
+  $('.check-list li').click(function() {
+/* remove class của tất cả li */
+    $('.check-list li').removeClass();
+/* chỉ add class 'checked' cho li đang click */
+    $(this).addClass('checked');
+  });
+});
+</script>
+</head>
+
+<body>
+  <ul class="check-list">
+    <li class="checked">01</li>
+    <li>02</li>
+    <li>03</li>
+    <li>04</li>
+    <li>05</li>
+    <li>06</li>
+    <li>07</li>
+  </ul>
+</body>
+</html>

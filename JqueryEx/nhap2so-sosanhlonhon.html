@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Học web chuẩn</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(function(){
+  $('input').change(function(){  // ở đây thì nó dùng change để bắt con đó (con change thì nó bắt giá trị ko cần reload lại trang)
+    var a = $('#nameA').val();  // cho số nhập vào biến a
+    var b = $('#nameB').val();  // cho số nhập vào biến b
+    var result = $('#result');  // và gán giá trị tới #resul cho con biến result
+    if(a > b) {                 // nếu a >b
+        result.text(a);         //  giá trị của biến result nhận là a
+      } else result.text(b);   // nếu ko giá trị
+  });
+});
+</script>
+</head>
+
+<body>
+<input type="text" id="nameA" value="0"> <input type="text" id="nameB" value="0">
+<div>Max: <span id="result"></span></div>
+</body>
+</html>
