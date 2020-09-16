@@ -1,0 +1,114 @@
+body{
+    font-family: arial;
+    font-style: 13px;
+    line-height: 23px;
+    color: #333;
+}
+#site{
+    position: relative;
+    overflow: hidden;
+}
+#wrapper{
+    width: 960px;
+    margin: 0px auto;
+    position: relative;
+    right: 0px;
+    transition: right 0.25s;
+}
+#wrapper #header{
+   position: relative;
+   text-align: center;
+   padding-top: 10px !important ; 
+   padding: 30px 10px;
+   background: gray;
+
+}
+#wrapper #header .logo{
+  display:block;
+  float: left; 
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+#wrapper #header .menu{
+   float: right;
+}
+#wrapper #header .menu .list{
+    width: auto;
+    margin-right: 10px;
+    float: right;
+    display: flex;
+}
+#wrapper #header .menu .list li{
+    margin: 0px 5px;
+    color: #f5f5f5;
+}
+#respon_menu{
+
+   background: #444;
+   width: 250px;
+   color: #f5f5f5;
+   position: absolute;
+   top: 0px;
+   right: -250px;
+   height: 100%;
+   transition: right 0.25s;
+}
+#respon_menu .list li{
+    padding: 15px 47px;
+    color: #f5f5f5;
+    border-top: 1px solid #ffc9c9;
+}
+#respon_menu h1{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+
+#icon{
+    display: none;
+    color: #f5f5f5;
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    top: 15px;
+}
+#wp-content{
+    width: 100%;
+}
+#footer{
+    padding: 15px 10px;
+    background: gray;
+}
+#content, #sidebar{
+    min-height: 600px;
+    /* padding: 10px; */ 
+}
+#content{
+    /* width: 660px; set như này thì nó sẽ kbh responsive được */
+    float: left;
+    background: #f5f5f5;
+    width: 70%;  
+    /* đặt như này thì nó sẽ theo kiểu % nhưng  con wrapper vẫn set cứng width nên vẫn chưa responsive được  */
+}
+#sidebar{
+    /* width: 300px; set như này thì nó sẽ kbh responsive được */
+    float: right;
+    background: #d5d5d5;
+    width: 30%;
+}
+
+#site.open-respon-menu #wrapper{
+ /* chỉ đến id site có classs openresspond và áp dụng cho idwrapper */
+    right: 250px;
+     transition: right 0.25s;
+}
+
+#site.open-respon-menu #respon_menu{
+/* chỉ đến id site có classs openresspond và áp dụng cho idresponmenu */
+
+    right: 0px;
+    transition: right 0.25s;
+}

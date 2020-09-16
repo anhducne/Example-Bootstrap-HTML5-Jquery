@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <style>
+          form *{
+        display: block;
+        margin: 10px 10px;
+          }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("form#target").submit(function(){        // thì link đến form có id target và khi bấm submit thì nó chạy cái hàm ở trong 
+                var username, password ;              // tạo 2 biến 
+                username = $("#user").val();          // gán 2 biến cho giá trị người dùng nhập
+                password = $("#pass").val();      
+                alert(username +"---"+ password);     // in ra cái giá trị đó 
+                return false;                        // chặn web reload
+            });
+            $("#other").click(function(){             // link đến id có other và khi bấm click thì hàm trong chạy
+                $("form#target").submit();          // khi click nó sẽ chạy đến 
+            });
+        })
+
+    </script>
+
+    <h1>Sự Kiện submit form trong jquery</h1>
+    <form id="target" method="POST" action="">
+              <label for="user">User Name : </label>
+              <input type="text" id="user" name="user">
+              <label for="pass">Password : </label>
+              <input type="password" id="pass" name="pass">
+              <input type="submit" name="sm_login" value="Login">
+    </form>
+
+    <a href="#" id="other">Other</a>
+</body>
+</html>

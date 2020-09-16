@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+<script>
+          $(document).ready(function(){
+               
+            $('.box').click(function(){
+                $(this).css({background : "blue" , padding : "100px 200px"});
+            })
+
+          })
+</script>
+<style>
+    .box{
+        padding: 50px 100px;
+        background-color: red;
+        color: #fff;
+        float: left;
+    }
+</style>
+    <div class="box">
+         BOX
+    </div>
+</body>
+</html>

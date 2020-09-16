@@ -1,0 +1,39 @@
+/* Ipad ngang (1024 x 768) */
+@media screen and (max-width: 1024px){
+    #wrapper{
+        width: 100%;  
+        /* cái này có nghĩa là trong cái khung lớn nhất là width = 1024 thì width của wrapper 
+        sẽ bằng cái width của trình duyệt lúc này nghĩa là ví dụ trình duyệt có width = 400
+        mà 400 < 1024 vậy width wrapper sẽ = 400px ; */
+    }
+}
+/* Ipad dọc (768 x 1024) */
+@media screen and (max-width: 768px){
+    #content, #sidebar{width: 100%;}
+}
+
+@media screen and (max-width: 600px){
+    .menu{display: none;}
+    #icon_header{display: block;}
+    .logo{display: inline-block;
+        float: none  !important;}
+    #header{padding: 15px 10px !important;}
+}
+/* Tablet nhỏ (480 x 640) */
+@media screen and (max-width: 480px){
+   
+    
+    /* còn con này thì nó kiểu khi mà thiết bị có width cao nhất là 480 thì cái content và sidebar 
+    sẽ tự động nở ra 100% và ko nằm trên cùng 1 khung nữa thì cái nội dung trong 2 con sẽ ko bị vỡ
+    khi mà kích thước thiết bị nhỏ lại  */
+}
+/* Iphone (480 x 640) */
+@media screen and (max-width: 375px){
+   
+}
+/* Smart phone nhỏ */
+@media screen and (max-width: 240px){
+}
+
+
+

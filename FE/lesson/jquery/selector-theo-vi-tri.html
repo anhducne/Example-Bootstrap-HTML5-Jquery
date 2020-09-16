@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+                  //1. Chọn phần tử p có chỉ số 1 //
+                //   $('p:eq(1)').css('color', 'red');   // p:eq(1) thì là vị trí số 1 của thẻ p bắt đầu vị trí 0 đầu tiên
+                //2. chọn phần tử p đầu tiên có màu đổ 
+                // $('p:first').css('color' , 'red');        // p:first thì là vị trí đầu tiên của thẻ p ở đây sẽ là vị trí 0 sẽ đc đỏ 
+                //3. chọn phần tử p cuối cùng 
+                // $('p:last').css('color','red');            //p:last thì là vị trí đầu tiên của thẻ p ở đây sẽ là vị trí 12 sẽ đc đỏ 
+                //4.  chọn phần tử p có chỉ số lớn hơn 1 
+                // $('p:gt(1)').css('color','red');                //p:gt(1) thì là vị trí lớn hơn 1 của thẻ p (từ 2 đến 12) sẽ đc đỏ 
+                //5 chọn phần tử p có chỉ số bé hơn 3 
+                // $('p:lt(3)').css('color','red');               //p:lt(3) thì là vị trí bé hơn 3 của thẻ p (từ 0 đến 2 ) sẽ đc đỏ 
+                //6. chọn phần tử chỉ có số lẻ màu đỏ 
+                // $('p:odd').css('color','red');                
+                //7.chọn phàn tử chỉ có số chẵn màu đổ 
+                // $('p:even').css('color','red');
+                //8.chọn tất cả các ohần tử p ngoại trừ 2 
+                // $("p:not('p:eq(2)')").css('color','red');           // nghĩa là phải chọn vị trí 2 sau đó trừa vbị trí 2 ra 
+        })
+    
+
+
+
+
+    </script>
+     
+     <p>Vị Trí 0</p>
+     <p>Vị Trí 1</p>
+     <p>Vị Trí 2</p>
+     <p>Vị Trí 3</p>
+     <p>Vị Trí 4</p>
+     <p>Vị Trí 5</p>
+     <p>Vị Trí 6</p>
+     <p>Vị Trí 7</p>
+     <p>Vị Trí 8</p>
+     <div class="box">
+     <p>Vị Trí 9</p>
+     <p>Vị Trí 10</p>
+     <p>Vị Trí 11</p>
+     <p>Vị Trí 12</p>
+     </div>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+        /* pc firt  */
+/* Ipad ngang (1024 x 768) */
+body{
+    background: yellow;
+}
+@media screen and (max-width: 1024px){
+    body{
+        background: black;
+    }
+}
+/* Ipad dọc (768 x 1024) */
+@media screen and (max-width: 768px){
+    body{
+        background: blue;
+    }
+}
+/* Tablet nhỏ (480 x 640) */
+@media screen and (max-width: 480px){
+    body{
+        background: gold;
+    }
+}
+/* Iphone (480 x 640) */
+@media screen and (max-width: 320px){
+    body{
+        background: gold;
+    }
+}
+/* Smart phone nhỏ */
+@media screen and (max-width: 240px){
+    body{
+        background: gold;
+    }
+}

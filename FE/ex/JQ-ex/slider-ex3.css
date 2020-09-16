@@ -1,0 +1,41 @@
+
+.wrapper *{
+    display: block;
+}
+.display{
+   margin: 50px;
+   width: 350px;
+   height: 350px;
+   background-color: #e74c3c;
+   text-align: center;
+}
+.display p{
+   font-size: 200px;
+   color: #fff;
+}
+.choose{
+   display: flex;
+   margin: 50px 50px;
+}
+.choose ul{
+   display: flex;
+
+}
+a{
+   width: 80px;
+   height: 80px;
+   margin: 5px
+}
+a p{
+   font-size: 50px;
+   color: #fff;
+   padding-left: 27px;
+   box-sizing: border-box;
+}
+ .choose a img {
+     width: 100%;
+     height: auto;
+ }
+ .choose ul li.active{
+     border: 2px red solid;
+ }

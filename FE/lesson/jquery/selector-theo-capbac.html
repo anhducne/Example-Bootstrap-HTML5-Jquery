@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+        //    //1. toàn bộ menu cấp 1 màu đỏ 
+        //    $("#main-menu >li>a ").css('color','red');
+        //    //2. toàn bộ menu có mày gold
+        //    $("#main-menu a").css('color','red');
+          // 3.in vào giá trị của input "đã có label " nếu nó có label phía trên 
+            //   $("form label + input").val('Đã có label');  // ngĩa là nó sẽ vào thẻ form và tiếp đến thẻ label thì nó sẽ + thẻ input nếu nó có
+            //                                                 // input thì nó sẽ xuất 'đã có label vào input luôn'
+            //                                                 //còn nó ko có label thì nó sẽ ko có con phía trước iput ==> để trống 
+            //4. toàn bộ input đứng sau label có value đứng sau label
+                //   $("form label ~ input").val('đừng sau label');  // nghĩa là nó sẽ input đứng sau label vào những cái input đứng sau cái label thứ
+                //                                                  // nhất, nếu xóa label thứ 2 3 input 2 3 vẫn có vì nó đừng sau label 1 
+                //           })
+    </script>
+    <ul id="main-menu">
+        <li><a href="">Menu 1</a></li>
+        <li><a href="">Menu 2</a>
+              <ul class="sub-menu">
+                  <li><a href="">Menu 2.1</a></li>
+                  <li><a href="">Menu 2.2</a></li>
+                  <li><a href="">Menu 2.3</a></li>
+              </ul>
+        </li>
+        <li><a href="">Menu 3</a></li>
+        <li><a href="">Menu 4</a></li>
+        <li><a href="">Menu 5</a></li>
+        <li><a href="">Menu 6</a></li>
+        <li><a href="">Menu 7</a></li>
+    </ul>
+
+     <style>
+         ul#main-menu li{
+             list-style: none;
+         }
+         ul#main-menu li a{
+              text-decoration: none;
+         }
+
+         form *{
+                  display: block;
+                  margin-bottom: 10px;
+         }
+     </style>
+    <form action="">
+        <label for="user_name">User Name</label>
+        <input type="text" id="user_name">
+        <label for="pass">Passwword</label>
+        <input type="text" id="pass">
+        <label for="wish">wissh</label>
+        <input type="text" id="wish">
+
+    </form>
+</body>
+</html>

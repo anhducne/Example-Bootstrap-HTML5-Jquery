@@ -1,0 +1,306 @@
+.container{
+    width: 100%;
+}
+.header{
+    max-width: 100%;
+    background-color: #23282d;
+    min-height: 85px;
+}
+
+
+img.logo01 {
+    max-width: 160px;
+    min-height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.link ul.list-banner{
+       display: flex;
+}
+
+.margin-left{
+    margin-left: 160px;
+}
+.link-a1{
+   padding-right: 30px;
+   padding-bottom: 20px;
+}
+.link-a1 a{
+    text-decoration: none;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 16px ;
+}
+.link-a1 a:hover{
+    color: #4db2ec;
+   
+}
+.opensan{
+    font-family: "Open Sans";
+}
+/* độ cao auto */
+.body02{
+    max-width: 83%;
+    min-height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 0;
+}
+.content1-noibat{
+    
+    min-height: auto;
+    z-index: 1;
+}
+.content1-noibat .logo-noibat{
+    width: 100px;
+    height: 30px;
+    background-color: #23282d;
+    margin-top: 30px;
+}
+.content1-noibat .logo-noibat p{
+    color: white;
+    text-align: center;
+    padding-top: 7px;
+    box-sizing: border-box;
+}
+.content1-noibat .content-noibat{
+    margin-top: 20px;
+    display: flex;
+}
+.content1-noibat .content-noibat .content-noibat-item{
+    width: 360px;
+   
+}
+.margin30{
+    margin-right: 30px;
+}
+.content1-noibat .content-noibat .content-noibat-item img{
+    width: 350px;
+    height: auto;
+}
+.content1-noibat .content-noibat .content-noibat-item a{
+    text-decoration: none;
+}
+.content1-noibat .content-noibat .content-noibat-item p{
+    color: #5f5f5f;
+    margin-top: 10px;
+    line-height: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* style của gạch xám  */
+.gachxam{
+    width: 100%;
+    height: 2px;
+    background-color: grey;
+    margin-top: 30px;
+}
+
+/* phần 2 nội dung của cục phía dưới */
+.content2-noidung{
+    margin-top: 30px;
+    width: 100%;
+    min-height: auto;
+    display: flex;
+}
+/* style của thằng nội dung phía bên trái */
+.content2-noidung .content2-left {
+    width: 70%;
+    /* background-color: red; */
+    height:auto;
+}
+.content2-noidung .content2-left .logo-baivietmoi{
+    width: 130px;
+    height: 30px;
+    background-color: #4db2ec;
+}
+.content2-noidung .content2-left .gachblue{
+    width: 100%;
+    height: 3px;
+    background-color: #4db2ec;
+}
+.content2-noidung .content2-left .logo-baivietmoi p{
+color: white;
+text-align: center;
+padding-top: 7px;
+box-sizing: border-box;
+}
+.content2-noidung .content2-left .content2-left-item .item-img a img{
+    width: 260px;
+    min-height: auto;
+} 
+.content2-noidung .content2-left .content2-left-item .content2-item{
+    display: flex;
+    margin: 20px 10px 0px 0px;
+}
+.content2-noidung .content2-left .content2-left-item .content2-item h1{
+    font-size: 24px;
+    color: #111111;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.content2-noidung .content2-left .content2-left-item .content2-item h1:hover{
+    color: #baddf6;
+}
+
+.content2-noidung .content2-left .content2-left-item .content2-item .item-text {
+    margin: 10px 15px 10px 15px;
+}
+.content2-noidung .content2-left .content2-left-item .content2-item .item-text p{
+    color: #777777; 
+}
+.content2-noidung .content2-left .content2-left-item .content2-item .item-text .date{
+    display: flex;
+    margin: 10px 0px 10px 0px;
+}
+.content2-noidung .content2-left .content2-left-item .content2-item .item-text .date span{
+    margin-left: 20px;
+    color: #777777;
+
+}
+.content2-noidung .content2-left .content2-left-item .content2-item .item-text .date p{
+    font-family: 'Open Sans', sans-serif;
+    color: #111111;
+}
+
+/* style của thằng phía bên phải  */
+/* phía trên */
+
+.content2-noidung .content2-right{
+    width: 30%;
+    /* background-color: blue; */
+    height: 400px;
+    margin: 0px 0px 0px 10px ;
+}
+
+.content2-noidung .content2-right .up{
+    background-image: url("image/ads.jpg");
+    background-size: cover;
+    width: 340px;
+    height: 200px;
+    position: relative;
+}
+.content2-noidung .content2-right .up .grey{
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
+    width: 340px;
+    height: 200px;
+}
+.content2-noidung .content2-right .up .aa2{
+    color: white;
+    position: absolute;
+    text-align: center;
+    font-size: 14px;
+    left: 20px;
+    top: 112px;
+}
+.content2-noidung .content2-right .up h1{
+    font-family: segoe ui;
+    font-weight: bold;
+    color: #f05510;
+    position: absolute;
+    left: 25px;
+    top: 50px;
+}
+.content2-noidung .content2-right .up .xemthem{
+    color: white;
+    background-color: #0073aa;
+    width: 100px;
+    height: 30px;
+    left: 125px;
+    top: 150px;
+    position: absolute;
+}
+.content2-noidung .content2-right .up .xemthem .aa1{
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+/* phía dưới */
+/* phía dưới logo */
+.down{
+    margin-top: 20px;
+}
+.down .logo03 .logo03-box {
+    width: 180px;
+    height: 30px;
+    background-color: #ff2d2d;
+}
+.down .logo03 .logo03-box .logo03-chudequantam{
+    color: white;
+text-align: center;
+padding-top: 7px;
+box-sizing: border-box;
+}
+.down .logo03 .gachdo{
+    width: 100%;
+    height: 2px;
+    background-color: #ff2d2d;
+    margin: 0px 0px;
+}
+/* phía dưới text */
+
+
+.down .logo03-text{
+   margin-top: 35px;
+}
+.down .logo03-text .left ul li.left-01-link{
+    margin: 0px 0px 20px 8px;
+}
+.down .logo03-text .left ul li.left-01-link a{
+  text-decoration: none;
+  color: #212121;
+  display: flex;
+  
+}
+.down .logo03-text .left ul li.left-01-link a:hover{
+   color: #ff2d2d;
+}
+
+.text-align-left{
+width: 50%;
+   text-align: left;
+}
+.text-align-right{
+    width: 50%;
+    text-align: right;
+}
+
+/* phần infor -end  */
+.end{
+    background-color: #2e2f30;
+}
+.end .up-01{
+    margin-top: 80px;
+    max-width: 83%;
+    height: 220px;
+    /* background-color: red; */
+    margin-left: 160px;
+
+}
+
+
+
+
+.end .up-02 { 
+    width: 100%;
+    height: 45px;
+    background-color: #222527;
+    display: flex;
+}
+  
+.end .up-02 .left-up-02{
+    width: 50%;
+    
+}
+.end .up-02 .left-up-02 p{
+    color: white;
+    font-size: 14px;
+    
+}
+
+.end .up-02 .right-up-02{
+    width: 50%;
+}

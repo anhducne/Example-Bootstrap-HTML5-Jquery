@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+
+<body>
+    <script>
+       $(document).ready(function(){
+           $("button.red").click(function(){
+               $('p').css('color','red');
+               $('p').css('font-weight','bold');
+           });
+           $("button.blue").click(function(){
+               $('p').css('color','blue');
+               $('p').css('font-size','38px');
+           });
+       })
+    </script>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, ut. Dolore, accusamus? Fuga nemo odit
+        facilis itaque illo in, placeat omnis, explicabo optio ducimus tempore quos ea est consequuntur dignissimos!</p>
+
+    <button class="red">
+        Đỏ
+    </button>
+
+    <button class="blue">
+        Xanh
+    </button>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <style>
+       a{
+           display: inline-block;
+           padding: 20px;
+           background-color: gold;
+           color: #fff;
+           text-decoration: none;
+       }
+    </style>
+    <script>
+      $(document).ready(function(){
+          $("a#target").hover(         // thì con này nó hàm như thế này .hover(handlerIn(),handerOut)
+              // hover In 
+              function(){   // đây là con handler In đó là khi cho chuột VÀO thì nó chạy cái đéo gì thì nó chạy cái ở trong funnction đấy
+                  console.log("hover-in");
+              },
+              //hover Out
+              function(){   // đây là con handler OUT đó là khi cho chuột RA thì nó chạy cái đéo gì thì nó chạy cái ở trong funnction đấy
+                  console.log("hover-out");
+              }
+          );
+          
+          $("a#target2").hover(
+              function(){
+                  console.log('hover - in - out ');
+              }
+          );
+
+
+    });
+    
+    </script>
+    <h1>Sự kiện hover trong Jquery</h1>
+
+     <a href="#" id="target">target</a>
+     <a href="#" id="target2">target2</a>
+
+</body>
+</html>

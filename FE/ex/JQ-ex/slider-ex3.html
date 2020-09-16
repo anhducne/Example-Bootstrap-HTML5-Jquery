@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-css-main/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="jquery-css-main/reset.css">
+    <link rel="stylesheet" href="slider-ex3.css">
+</head>
+<body>
+   
+
+       <script>   // cách này là cách của unitop gán giá trị của ảnh vào thumb luôn và lấy đó truyền lên slider
+    $(document).ready(function(){
+          var src_img_click;          // tạo ra một biến src_img_click
+          $(".choose a").click(function(){  // khi mà click vào thẻ a thì chạy vào hàm
+              src_img_click = $(this).children('img').attr('src');  // khi đó biến đc gán giá trị của src vào khi bấm vào con đang bấm (this), children(img) tức là thẻ con của thẻ img
+            //   console.log(src_img_click);   // in ra cửa sổ console để check
+          $(".display img").attr("src", src_img_click) ; // thì nó trỏ đến thẻ img và sau đó truyền cái src của cái tab mình bấm vào src của ấy    
+           
+           // tạo 1 cái viền khi click vào các slider con nâng cao trải nghiệm người dùng 
+           $(".choose ul li").removeClass("active");  // tạo 1 cái selector và removeclass khi khởi chạy
+           $(this).parent('li').addClass("active");   // khi chay 1 vòng thì nó sẽ cho active vào xong đó chạy lại vòng mới thì nó xóa cái cũ và cho cái mới này vào 
+        
+        return false; // return này luôn để cuối cùng 
+          });
+
+          var src_img_first;   // tạo ra một biến first 
+          src_img_first = $('.choose a:first-child img').attr('src'); // gán giá trị biến đó vào con trong div choose có thẻ a đầu tiên và tới thẻ img trong thẻ a đó, và lấy cái thuộc tính src của img
+
+        //   console.log(src_img_first)
+          $(".display img").attr("src", src_img_first) ;  // và gán giá khi đầu tiên khi load trang cho bằng src của con img của thẻ a đầu tiên
+   
+      
+          
+
+    })
+       </script>
+
+
+     <div class="wrapper">
+        <div class="display">
+           <img src="" alt="">
+       </div>
+
+    <div class="choose">
+        <ul>
+        <li ><a href="#" id="blue"><img src="img/4.png" alt=""></a></li>
+       <li> <a href="#" id="tomato"><img src="img/Show1.png" alt=""></a>  </li>
+        <!-- ví dụ trên là thẻ a đầu tiên thì muốn trảo đổi thẻ 4 lên đầu nó load đầu  -->
+        <!-- còn nếu không set gì thì thẻ đầu mặc định ko có vì img của choose để trống src  -->
+        <li><a href="#" id="orange"><img src="img/2.png" alt=""></a></li>
+       <li> <a href="#" id="green"><img src="img/3.png" alt=""></a></li>
+        </ul>
+    </div>
+     </div>
+</body>
+</html>

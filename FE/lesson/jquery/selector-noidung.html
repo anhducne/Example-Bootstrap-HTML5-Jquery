@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+         
+         //1. Tìm phần tử không có nội dung //
+        //  $('ul li:empty').text('không có nội dung').css('color','red'); thì nó sẽ tìm các nội dung bị trống và thay thế vào đó 1 đoạn text đc định trước css 
+        //2. Tìm các phần tử có chứa nội dung Phần //
+        // $("ul li:contains('Phần')").css('color','red');    thì nó sẽ tìm các ptu có nội dung bắt đầu bằng phần 
+        //3. Tìm tất cả các phần tử có phần tử con hoặc có nội dung ==> màu đỏ 
+        //  $("ul li:parent").css('color','red');   thì các phần tử có phần tử CON hoặc có NỘI DUNG sẽ có màu đỏ 
+        //4.tì pann tử có ít nhất   phần tử con là selector cho trước   
+        //    $(" ul li:has(.color_red)").css('border','1px solid red'); nghĩa là kiểu lấy những con ul có .color red ở trong nó 
+
+        })
+     </script>
+
+
+<ul>
+    <li>Phần tử 1 </li>
+    <li>
+        <ul class="color_red">
+            <li>Phần tử 2.1</li>
+            <li>Phần tử 2.2</li>
+        </ul>
+    </li>
+    <li>Phần tử 3 </li>
+    <li>Phần tử 4 </li>
+    <li>Phần tử 5 </li>
+    <li>Phần tử 6 </li>
+    <li><ul>
+        <li>Phần tử 7.1</li>
+        <li>Phần tử 7.2</li>
+    </ul></li>
+    <li>Phần tử 8 </li>
+</ul>
+</body>
+</html>

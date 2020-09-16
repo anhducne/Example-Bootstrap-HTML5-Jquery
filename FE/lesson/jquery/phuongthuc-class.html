@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+ <style>
+     .high_light{
+          color: red;
+          background-color: yellow;
+     }
+ </style>
+
+
+    <script>
+   $(document).ready(function(){
+       $('p').click(function(){   // sự kiện khi bấm vào thẻ p thì chạy function //
+    //    1. nhiệm vụ gọi cái class chứa style cho thẻ p //
+            //   $('p').css({'color':'red', 'background-color':'yellow'});  đây là kiểu cũ 
+        //   2. nhiệm vụ gọi cái class chứa style cho thẻ p
+                //  $('p').addClass('high_light');
+            //  3. nhiệm vụ khi bấm cáo 1 cái thẻ p thì mỗi 1 thẻ p ấy sáng và khi bấm thẻ khác thì cũng như thế 
+                    // cách 1 dùng thuật toán : 
+                    // if(!$(this).hasClass('high_light')){   // gọi hàm  !if là hàm ngược kiểm tra this là cái con đang chỉ vào vd chọn vb số 4 thì nó sẽ áp dụng cho vb số 4 và nếu nó ko có class nó mới chạy còn nó có class thì nó đê nguyên 
+                    //     $('p').removeClass('high_light');  // sau đó nó kiểm tra tất cả thẻ p thẻ nào có high light thì nó sẽ remove hết 
+                    //     $(this).addClass('high_light');    // và tại con đang trỏ (this) thì nó sẽ add cái class hight light vào tức là mình click vào đó
+                    // }; 
+                     // cách 2 dùng các phương thức về class  
+                         $('p').removeClass('high_light');  // nghĩa là khi click vào thì nó sẽ xóa sạch 
+                         $(this).toggleClass('high_light'); // cái này như nút công tắc, và khi xóa sạch thì nó sẽ bật con this cứ nthe
+       })
+   })
+    </script>
+   <p>Đoạn văn bản số 1 </p>
+   <p>Đoạn văn bản số 2 </p>
+   <p>Đoạn văn bản số 3 </p>
+   <p>Đoạn văn bản số 4 </p>
+   <p>Đoạn văn bản số 5 </p>
+   <p>Đoạn văn bản số 6 </p>
+</body>
+</html>

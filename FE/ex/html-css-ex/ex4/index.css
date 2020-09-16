@@ -1,0 +1,30 @@
+body{
+    width: 75%;
+    margin-left: 13%;
+}
+
+.aligncenter{
+    text-align: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.italic{
+    font-style: italic;
+}
+.uppcase{
+    text-transform:uppercase;
+}
+.lineth{
+    text-decoration: line-through;
+}
+.alignright{
+    text-align: right;
+    color: orange;
+}
+
+.linehe{
+    line-height: 64px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <!-- 1. thiết lập text có màu đỏ 
+       2. thiết lập các box có css wd 200 he 100 margin20 boder solid 1px 333\
+       3. box 1 có background back 
+       4. box 2, 3 có back ground gold  -->
+
+   <script>
+          $(document).ready(function(){
+              $('p').css('color', 'red');
+            
+            //   $('.box').css('width','200px');
+            //   $('.box').css('height','100px');
+            //   $('.box').css('margin','20px');
+            //   $('.box').css('border','solid 1px #333'); viết thế này oke nma hơi dài và loạn //
+            $('.box').css({'width' : '200px' , 'height' : '100px' , 'margin' : '20px' , 'border' : 'solid 1px #333'});
+
+            $('#box1').css('background','black');
+              
+              $('#box2, #box3').css('background-color', 'gold');
+          })     
+   </script>
+   <style>
+       #box1{
+           background-color: black;
+       }
+       body{
+           /* background-color: black; */
+       }
+   </style>
+    <div id="box1" class="box"><p>Nội dung khối 1 </p></div>
+    <div id="box2" class="box"><p>Nội dung khối 2 </p></div>
+    <div id="box3" class="box"><p>Nội dung khối 3 </p></div>
+</body>
+</html>

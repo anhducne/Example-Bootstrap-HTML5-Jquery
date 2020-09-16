@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+
+<body>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            font-size: 14px;
+            font-family: arial;
+            line-height: 25px;
+        }
+        #wrapper{
+            width: 960px;
+            margin: 0px auto;
+        }
+        #footer, #header{
+            background: #333;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        #content{
+            padding: 20px 0px;
+            position: relative;
+        }
+        #content p{
+            margin-bottom: 15px;
+            
+        }
+        .value{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 500px;
+            top: 500px;
+            background-color: red ;
+        }
+    </style>
+
+
+<script>
+    $(document).ready(function(){
+            //1. Lấy thông số khi scroll chuột dùng thuộc tính scroll top
+        // var windown_scroll_top;      // tạo một cái biến 
+        // $(window).scroll(function(){  // selector đenes cửa sổ windown là nói chung là cả cái màn hình đang làm việc rồi gọi đến phương thức scroll và tạo 1 hàm, mình có thể 
+                                          // làm việc với cả windown hoặc chỉ với một div nào đó mà kiểu nó chạy đc í nói chung là tùy 
+        //     windown_scroll_top = $(window).scrollTop(); // gán biến cho giá trị của của scroll khi ta scroll chuột
+        //     console.log(windown_scroll_top); // in ra cửa sổ console
+        // })    
+        // 2. khi load vào thì nó ở 1 vị trí cố định nào đó ở trang web ngoài vị trí đầu trang 
+        //    var windown_scroll_top;
+        //          $(window).scrollTop(200);   // thì cho cái selector này ra ngoài và đặt cho nó 200 là nó sẽ bắt đầu ở 200
+        //    $(window).scroll(function(){
+        //        windown_scroll_top = $(window).scrollTop();
+        //        console.log(windown_scroll_top);
+        //    })
+        // ==> cái này dùng để lấy thông tin hay làm cái kiểu bấm để về đầu trang ấy 
+        //3. tương tự đó thì có thuộc tính .scrollLeft để scroll 2 bên vì ít dùng nên bỏ qua ví dụ nha
+        //4. Dùng .offset().top - .offset().left  để lấy tọa độ của 1 đối tượng nào đó 
+            //  var footer_offset_top;
+            //  var footer_offset_left;
+                      
+            //           footer_offset_top = $("#footer").offset().top;
+            //           footer_offset_left = $("#footer").offset().left;
+                      
+            //           console.log(footer_offset_left);
+            //           console.log(footer_offset_top);
+                
+            //     thì con này mình đang lấy tọa độ của con div footer thì cin này nó không cần dùng hàm bao ngoài 
+         //5. Dùng .position().top - .position().left  để lấy tọa độ của 1 đối tượng nằm trên 1 đối tượng nào dó nào đó( mới tạo 1 cái nằm trên
+         // đó xong .value ấy)
+                // var value_position_top;
+                // var value_position_left;
+
+                //         value_position_top = $(".value").position().top;
+                //         value_position_left = $(".value").position().left;
+                       
+                //         console.log(value_position_top);
+                //        console.log(value_position_left);
+
+    })
+</script>
+
+
+
+    <div id="wrapper">
+        <div id="header">
+            Header
+        </div>
+        <div id="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quos fuga quae, quis debitis reiciendis,
+                consequatur ab natus sit tempora eius labore magnam? Nobis modi, tempora illo doloribus autem voluptates
+                qui commodi molestias temporibus quis dolores quasi distinctio laudantium dolorum velit eveniet omnis
+                quam voluptas quisquam harum adipisci vero porro cupiditate neque? Nemo, voluptas, ipsa ab itaque
+                inventore quia ullam iusto esse alias similique repudiandae odit? Laborum odit necessitatibus quia
+                facilis beatae voluptas? Libero tempora ipsum soluta obcaecati. Adipisci, laudantium nostrum! Fugiat
+                nesciunt iusto commodi perferendis aut culpa! Cum harum minus repellendus ullam vitae repellat
+                doloremque accusantium temporibus dolorem sint hic blanditiis id incidunt consectetur ipsam in labore,
+                ipsum molestiae illo alias numquam culpa. Consequatur distinctio enim voluptate reiciendis soluta neque
+                vero ratione, repudiandae repellendus consectetur cupiditate, sapiente assumenda totam ex tempora libero
+                ab consequuntur amet delectus earum modi saepe. Cupiditate dicta aperiam vel, possimus distinctio
+                corrupti voluptas labore dolorem itaque fugiat repellat, eius placeat reprehenderit, asperiores
+                doloribus pariatur? Reprehenderit aut debitis fuga dignissimos ducimus ullam at, nihil et neque sunt
+                alias sit explicabo quibusdam, incidunt minima quod? Sit dignissimos consectetur, voluptate facere autem
+                omnis rerum at laborum deleniti sed numquam veniam neque, delectus dolorem illum saepe facilis
+                voluptates quis dolores possimus mollitia in eum. Sequi, minima corrupti rerum deserunt nisi omnis
+                explicabo id hic numquam natus ab officiis maiores, magni officia eos placeat. Pariatur eaque dolore
+                incidunt rem excepturi ad sint, laboriosam, sunt illum, a quod qui praesentium vel expedita illo minus
+                iste consequuntur consequatur numquam in rerum! Nostrum unde dolores eius alias est ex? Earum, quisquam,
+                laborum quia animi sed nihil accusamus a eius temporibus architecto itaque ad reprehenderit! Distinctio
+                inventore voluptates quaerat cum aut consequuntur reiciendis porro rem quod necessitatibus hic deleniti,
+                sapiente consectetur eligendi deserunt rerum eum ex minus ducimus omnis. Earum quod asperiores
+                blanditiis tempora.
+            </p>
+            <div class="value">
+                Value 
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quos fuga quae, quis debitis reiciendis,
+                consequatur ab natus sit tempora eius labore magnam? Nobis modi, tempora illo doloribus autem voluptates
+                qui commodi molestias temporibus quis dolores quasi distinctio laudantium dolorum velit eveniet omnis
+                quam voluptas quisquam harum adipisci vero porro cupiditate neque? Nemo, voluptas, ipsa ab itaque
+                inventore quia ullam iusto esse alias similique repudiandae odit? Laborum odit necessitatibus quia
+                facilis beatae voluptas? Libero tempora ipsum soluta obcaecati. Adipisci, laudantium nostrum! Fugiat
+                nesciunt iusto commodi perferendis aut culpa! Cum harum minus repellendus ullam vitae repellat
+                doloremque accusantium temporibus dolorem sint hic blanditiis id incidunt consectetur ipsam in labore,
+                ipsum molestiae illo alias numquam culpa. Consequatur distinctio enim voluptate reiciendis soluta neque
+                vero ratione, repudiandae repellendus consectetur cupiditate, sapiente assumenda totam ex tempora libero
+                ab consequuntur amet delectus earum modi saepe. Cupiditate dicta aperiam vel, possimus distinctio
+                corrupti voluptas labore dolorem itaque fugiat repellat, eius placeat reprehenderit, asperiores
+                doloribus pariatur? Reprehenderit aut debitis fuga dignissimos ducimus ullam at, nihil et neque sunt
+                alias sit explicabo quibusdam, incidunt minima quod? Sit dignissimos consectetur, voluptate facere autem
+                omnis rerum at laborum deleniti sed numquam veniam neque, delectus dolorem illum saepe facilis
+                voluptates quis dolores possimus mollitia in eum. Sequi, minima corrupti rerum deserunt nisi omnis
+                explicabo id hic numquam natus ab officiis maiores, magni officia eos placeat. Pariatur eaque dolore
+                incidunt rem excepturi ad sint, laboriosam, sunt illum, a quod qui praesentium vel expedita illo minus
+                iste consequuntur consequatur numquam in rerum! Nostrum unde dolores eius alias est ex? Earum, quisquam,
+                laborum quia animi sed nihil accusamus a eius temporibus architecto itaque ad reprehenderit! Distinctio
+                inventore voluptates quaerat cum aut consequuntur reiciendis porro rem quod necessitatibus hic deleniti,
+                sapiente consectetur eligendi deserunt rerum eum ex minus ducimus omnis. Earum quod asperiores
+                blanditiis tempora.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quos fuga quae, quis debitis reiciendis,
+                consequatur ab natus sit tempora eius labore magnam? Nobis modi, tempora illo doloribus autem voluptates
+                qui commodi molestias temporibus quis dolores quasi distinctio laudantium dolorum velit eveniet omnis
+                quam voluptas quisquam harum adipisci vero porro cupiditate neque? Nemo, voluptas, ipsa ab itaque
+                inventore quia ullam iusto esse alias similique repudiandae odit? Laborum odit necessitatibus quia
+                facilis beatae voluptas? Libero tempora ipsum soluta obcaecati. Adipisci, laudantium nostrum! Fugiat
+                nesciunt iusto commodi perferendis aut culpa! Cum harum minus repellendus ullam vitae repellat
+                doloremque accusantium temporibus dolorem sint hic blanditiis id incidunt consectetur ipsam in labore,
+                ipsum molestiae illo alias numquam culpa. Consequatur distinctio enim voluptate reiciendis soluta neque
+                vero ratione, repudiandae repellendus consectetur cupiditate, sapiente assumenda totam ex tempora libero
+                ab consequuntur amet delectus earum modi saepe. Cupiditate dicta aperiam vel, possimus distinctio
+                corrupti voluptas labore dolorem itaque fugiat repellat, eius placeat reprehenderit, asperiores
+                doloribus pariatur? Reprehenderit aut debitis fuga dignissimos ducimus ullam at, nihil et neque sunt
+                alias sit explicabo quibusdam, incidunt minima quod? Sit dignissimos consectetur, voluptate facere autem
+                omnis rerum at laborum deleniti sed numquam veniam neque, delectus dolorem illum saepe facilis
+                voluptates quis dolores possimus mollitia in eum. Sequi, minima corrupti rerum deserunt nisi omnis
+                explicabo id hic numquam natus ab officiis maiores, magni officia eos placeat. Pariatur eaque dolore
+                incidunt rem excepturi ad sint, laboriosam, sunt illum, a quod qui praesentium vel expedita illo minus
+                iste consequuntur consequatur numquam in rerum! Nostrum unde dolores eius alias est ex? Earum, quisquam,
+                laborum quia animi sed nihil accusamus a eius temporibus architecto itaque ad reprehenderit! Distinctio
+                inventore voluptates quaerat cum aut consequuntur reiciendis porro rem quod necessitatibus hic deleniti,
+                sapiente consectetur eligendi deserunt rerum eum ex minus ducimus omnis. Earum quod asperiores
+                blanditiis tempora.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quos fuga quae, quis debitis reiciendis,
+                consequatur ab natus sit tempora eius labore magnam? Nobis modi, tempora illo doloribus autem voluptates
+                qui commodi molestias temporibus quis dolores quasi distinctio laudantium dolorum velit eveniet omnis
+                quam voluptas quisquam harum adipisci vero porro cupiditate neque? Nemo, voluptas, ipsa ab itaque
+                inventore quia ullam iusto esse alias similique repudiandae odit? Laborum odit necessitatibus quia
+                facilis beatae voluptas? Libero tempora ipsum soluta obcaecati. Adipisci, laudantium nostrum! Fugiat
+                nesciunt iusto commodi perferendis aut culpa! Cum harum minus repellendus ullam vitae repellat
+                doloremque accusantium temporibus dolorem sint hic blanditiis id incidunt consectetur ipsam in labore,
+                ipsum molestiae illo alias numquam culpa. Consequatur distinctio enim voluptate reiciendis soluta neque
+                vero ratione, repudiandae repellendus consectetur cupiditate, sapiente assumenda totam ex tempora libero
+                ab consequuntur amet delectus earum modi saepe. Cupiditate dicta aperiam vel, possimus distinctio
+                corrupti voluptas labore dolorem itaque fugiat repellat, eius placeat reprehenderit, asperiores
+                doloribus pariatur? Reprehenderit aut debitis fuga dignissimos ducimus ullam at, nihil et neque sunt
+                alias sit explicabo quibusdam, incidunt minima quod? Sit dignissimos consectetur, voluptate facere autem
+                omnis rerum at laborum deleniti sed numquam veniam neque, delectus dolorem illum saepe facilis
+                voluptates quis dolores possimus mollitia in eum. Sequi, minima corrupti rerum deserunt nisi omnis
+                explicabo id hic numquam natus ab officiis maiores, magni officia eos placeat. Pariatur eaque dolore
+                incidunt rem excepturi ad sint, laboriosam, sunt illum, a quod qui praesentium vel expedita illo minus
+                iste consequuntur consequatur numquam in rerum! Nostrum unde dolores eius alias est ex? Earum, quisquam,
+                laborum quia animi sed nihil accusamus a eius temporibus architecto itaque ad reprehenderit! Distinctio
+                inventore voluptates quaerat cum aut consequuntur reiciendis porro rem quod necessitatibus hic deleniti,
+                sapiente consectetur eligendi deserunt rerum eum ex minus ducimus omnis. Earum quod asperiores
+                blanditiis tempora.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quos fuga quae, quis debitis reiciendis,
+                consequatur ab natus sit tempora eius labore magnam? Nobis modi, tempora illo doloribus autem voluptates
+                qui commodi molestias temporibus quis dolores quasi distinctio laudantium dolorum velit eveniet omnis
+                quam voluptas quisquam harum adipisci vero porro cupiditate neque? Nemo, voluptas, ipsa ab itaque
+                inventore quia ullam iusto esse alias similique repudiandae odit? Laborum odit necessitatibus quia
+                facilis beatae voluptas? Libero tempora ipsum soluta obcaecati. Adipisci, laudantium nostrum! Fugiat
+                nesciunt iusto commodi perferendis aut culpa! Cum harum minus repellendus ullam vitae repellat
+                doloremque accusantium temporibus dolorem sint hic blanditiis id incidunt consectetur ipsam in labore,
+                ipsum molestiae illo alias numquam culpa. Consequatur distinctio enim voluptate reiciendis soluta neque
+                vero ratione, repudiandae repellendus consectetur cupiditate, sapiente assumenda totam ex tempora libero
+                ab consequuntur amet delectus earum modi saepe. Cupiditate dicta aperiam vel, possimus distinctio
+                corrupti voluptas labore dolorem itaque fugiat repellat, eius placeat reprehenderit, asperiores
+                doloribus pariatur? Reprehenderit aut debitis fuga dignissimos ducimus ullam at, nihil et neque sunt
+                alias sit explicabo quibusdam, incidunt minima quod? Sit dignissimos consectetur, voluptate facere autem
+                omnis rerum at laborum deleniti sed numquam veniam neque, delectus dolorem illum saepe facilis
+                voluptates quis dolores possimus mollitia in eum. Sequi, minima corrupti rerum deserunt nisi omnis
+                explicabo id hic numquam natus ab officiis maiores, magni officia eos placeat. Pariatur eaque dolore
+                incidunt rem excepturi ad sint, laboriosam, sunt illum, a quod qui praesentium vel expedita illo minus
+                iste consequuntur consequatur numquam in rerum! Nostrum unde dolores eius alias est ex? Earum, quisquam,
+                laborum quia animi sed nihil accusamus a eius temporibus architecto itaque ad reprehenderit! Distinctio
+                inventore voluptates quaerat cum aut consequuntur reiciendis porro rem quod necessitatibus hic deleniti,
+                sapiente consectetur eligendi deserunt rerum eum ex minus ducimus omnis. Earum quod asperiores
+                blanditiis tempora.
+            </p>
+        </div>
+        <div id="footer">
+            Footer
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

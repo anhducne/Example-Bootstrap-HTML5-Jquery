@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+
+<body>
+    <style>
+        #box {
+            width: 400px;
+            padding: 40px;
+            background: #e74c3c;
+            text-align: center;
+            color: #fff;
+            
+        }
+    </style>
+
+    <script>
+          $(document).ready(function(){
+            $("#effect-show").click(function(){  // tạo 1 cái đường khi clicj vào effect show thì như thế nào 
+               $("#box").show(1000);                 // khi click vào thì con box nó sẽ show và 1000 đó là 1000ms tính là 1s transiton ấy 
+            });
+            $("#effect-hide").click(function(){
+               $("#box").hide(1000);
+            });
+            $("#effect-toggle").click(function(){
+               $("#box").toggle(1000);
+            });
+          });
+    </script>
+
+    <h1>Hiệu ứng show - hide trong jquery</h1>
+    <a href="#" id="effect-show">Show</a>
+    <a href="#" id="effect-hide">Hide</a>
+    <a href="#" id="effect-toggle">Toggle</a>
+    <div id="box">
+        BOX
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem corrupti asperiores delectus hic saepe molestias,
+        incidunt aliquid unde in, eligendi excepturi quasi doloribus, fugiat aspernatur natus cupiditate debitis
+        nostrum! Asperiores dicta sit voluptate minus tenetur consequatur perferendis in non. Mollitia eum laboriosam,
+        tenetur maiores explicabo culpa molestiae atque exercitationem recusandae, quasi nam repellendus soluta facere a
+        non vero odit quisquam! Sit dolore quasi asperiores, qui iusto ab, fugiat id eaque quod odit, facere nesciunt
+        quia nihil. Error quae consequatur numquam, corporis, voluptatibus ullam, eveniet unde ad dolore maiores
+        excepturi alias impedit ipsum dolor ipsa magni eum. Obcaecati mollitia fuga ad expedita laboriosam veniam unde
+        modi impedit facilis? Dignissimos saepe officiis beatae nulla! Numquam aliquid magnam aliquam amet non quibusdam
+        quia odit laboriosam, molestias quas minima maiores tenetur tempore consequuntur sapiente iusto ducimus,
+        corrupti debitis nulla? Doloribus iste odit harum ut ducimus voluptatem recusandae quod ea molestiae, aliquid,
+        natus deserunt est nostrum blanditiis cumque exercitationem, debitis distinctio necessitatibus! Accusamus
+        recusandae ea, nam, est libero tempore, aliquam ad culpa nemo corrupti veritatis nihil? Illum, optio ullam
+        consequuntur ex, qui soluta est maxime cupiditate aliquid iste, pariatur atque iure assumenda cumque eligendi
+        natus! Ad quia architecto saepe id amet perspiciatis, aut voluptatum, magnam quo voluptas numquam beatae qui
+        dignissimos corporis modi odit quis officia rem. Iusto nobis ea maiores repellendus aperiam aspernatur
+        accusantium harum, eligendi magnam porro autem libero numquam recusandae ut quasi pariatur tempora. Saepe
+        reprehenderit quae, eum culpa tenetur nulla quas, tempora nemo omnis atque vel distinctio excepturi! In illo
+        atque rerum sit, dolorum, voluptates sunt itaque facere officia ad magni quia, corrupti architecto inventore.
+        Deleniti beatae illum quos eos a eius. A perferendis optio earum accusamus, corporis nemo, tenetur voluptatibus
+        itaque modi illo blanditiis. Quisquam ratione, quam porro vero reiciendis autem reprehenderit nesciunt
+        voluptates earum quaerat incidunt modi sequi animi.</p>
+</body>
+
+</html>

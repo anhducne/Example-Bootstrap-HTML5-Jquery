@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+           /*  // Bài 1 : tính tổng các số nguyên chẵn 
+            
+             var total =0;
+            for ( var i =1 ; i<=10 ; i++){
+            if(i%2 == 0){         // nó sẽ chạy i từ 1 đến 10 xem thằng nào là thằng chẵn
+                total += i;       // khi này biến total sẽ cộng từng thằng số chẵn i 
+            document.write(i + "</br>");  // in ra những cái số mà chẵn 
+            }
+       }
+       document.write("Kết quả của bài toán tính các số nguyên chẵn : " + total);
+          */
+        
+          /* // Bài 2 : tính tổng chuỗi t1 . t1 = 1 + 1/2 + 1/3 + ... + 1/n //
+        var total = 0;
+
+       for (var i = 1 ; i <= 3 ; i++ )
+       {
+          total += 1/(i);
+       }
+    tính tổng chuỗi t1 . t1 = 1 + 1/2 + 1/3 + ... + 1/n 
+        */
+
+        // tính tổng chuỗi t2 t2 = 1/2 + 2/3 + 3/4 + ... + n-1/n
+        var total = 0 ;
+
+        for(var i= 1 ; i <= 10 ; i++){
+            total += 1 - 1/(i);
+        }
+      document.write(total);
+    </script>
+</body>
+</html>

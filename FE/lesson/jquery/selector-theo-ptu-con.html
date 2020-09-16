@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <script>
+            $(document).ready(function(){
+                //1. chọn bài viết đầu tiên và cho nó có màu đỏ //
+                // $('ul.list-post :first-child').css('color','red'); // nghĩa là nó sẽ chọn con đầu tiên cuả con list post 
+                //2. chọn bài bviết cuối cùng và cho nó màu đỏ //
+                // $("ul.list-post p:last-child").css('color','red'); // nghĩa là nó sẽ chọn con đầu tiên cuả con list post có thể thêm thẻ p để rõ ràng hơn 
+                //3. nth-child(index-even-odd-equation)  chọn theo số vị trí or chẵn or lẻ or 1 biểu thức toán học 
+                // $("ul.list-post :nth-child(odd)").css('color','red');   lẻ 
+                // $('ul.list-post :nth-child(even)').css('color','red'); chẵn 
+                // $("ul.list-post :nth-child(3)").css('color','red'); chọn ở vị trí số 3 
+                // $("ul.list-post :nth-child(3n)").css('color','red');  chọn theo 1 biẻu thức chia hết cho 3 
+                //4. chọn phần tử là con duy nhát của phần tử cha 
+                // $("ul.list-post :only-child").css('color','red');    thì chọn phần tử là con duy nhất trong 1 thẻ 
+            })
+    </script>
+
+    <ul class="list-post">
+        <li>Bài viết 1 </li>
+        <li>Bài viết 2 </li>
+        <li>Bài viết 3 </li>
+        <li>Bài viết 4 </li>
+        <li>Bài viết 5 </li>
+        <li>Bài viết 6 </li>
+        <li>Bài viết 7 </li>
+        <li>Bài viết 8 </li>
+        <li>Bài viết 9 </li>
+    </ul>
+    <ul class="list-post">
+        <li>bài viết 1</li>
+    </ul>
+</body>
+</html>

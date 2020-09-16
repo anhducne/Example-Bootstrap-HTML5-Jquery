@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <script>
+       $(document).ready(function(){
+//    1, lấy giá trị thuộc tính của 1 thẻ 
+        //    $('a.get_link_img').click(function(){     
+        //            var link_imgl;                     
+        //            link_imgl= $('img').attr("src");  
+        //            alert(link_imgl);   
+             
+                   /*đây là nó sẽ gọi cái thẻ a chứa class getlink img xong*/
+                    /*nó sẽ dùng cái click(khi click vào thẻ a thì ham này nó chạy) để gọi cái hàm con ở dưới*/
+                    /* 1, tạo 1 biến link-img 2, gán biến đó cho phương thức selector chọn thẻ img và truy cập vào cái phương thức src */
+                   /*  in ra thông báo nó sẽ in ra cái link ảnh khi bấm vào thẻ a */
+                                 
+                  //    các bạn có thấy cái href của con thẻ a là #  khi mà click vào a thì nó sẽ dẫn tới #
+                //    để ko dẫn tới # mà nó chỉ chạy xủ lý trong 1 web thì bạn thêm 
+                //    return false;          
+//    2, lấy giá trị thuộc tính của 1 thẻ và thay thuộc tính đó bằng giá trị khác 
+            // $('a.get_link_img').click(function(){     
+            //        var link_imgl;                     
+            //        link_imgl= $('img').attr("src",'js/ahihi.jpg');  //cái này nó thêm ,"" phía sau để thêm cái link thay thế vào khi bấm vào thẻ a//
+            //        alert(link_imgl);   
+            //         return false;
+    //    3, lấy giá trị thuộc tính của 1 thẻ và xóa thuộc tính
+     $('a.get_link_img').click(function(){     
+                   var link_imgl;                     
+                   link_imgl= $('img').removeAttr("src");  //cái này nó khi bấm vào thẻ a thì nó sẽ remove cái ấy luôn cái ảnh luôn
+                   alert(link_imgl);   
+                    return false;
+           })
+       })
+    </script>
+
+    <img src="js/mayluatao.jpg" alt="">
+    <a class="get_link_img" href="#">Lấy link ảnh </a>
+</body>
+</html>

@@ -1,0 +1,35 @@
+html{
+    padding-left: 18%;
+    padding-right: 18%;
+}
+
+.header{
+    background-color: turquoise;
+    transition: 0.5s;
+}
+.header:hover{
+    background-color: violet;
+    transition: 0.5s;
+    padding-left: 200px;
+}
+
+.orange{
+    color: orange;
+}
+.green{
+    color: greenyellow;
+}
+
+.body .text1 p a.link{
+    color: red;
+    font-weight: bold;
+}
+
+.body .text1 p a.link:hover{
+    color:blue;
+    font-weight: bold;
+}
+
+.end form :checked + label{
+    color: red;
+}

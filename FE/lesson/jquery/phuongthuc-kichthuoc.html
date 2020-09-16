@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+
+    <style>
+            .box{
+                border: 1px solid #333;
+                min-height: 100px;
+                width: 200px;
+                margin: 20px 0px;
+            }
+            #box1{
+                padding: 10px 20px;
+            }
+    </style>
+
+<script>
+   $(document).ready(function(){
+   var height_box1, innerHeight_box1, outerHeight_box1 ;  // tạo biến
+   var width_box1, innerWidth_box1, outerWidth_box1 ;
+
+   height_box1 = $('#box1').height();             // gán biến với phương thức để lấy tham số vào biến height : giá trị gốc
+   innerHeight_box1 = $('#box1').innerHeight();   // innerHeight : lấy giá trị gốc + padding 
+   outerHeight_box1 = $('#box1').outerHeight();   // outerHeight : lấy giá trị gốc + padding + border 
+      console.log(height_box1 +" - "+innerHeight_box1+" - "+outerHeight_box1);
+})
+</script>
+
+    <div class="box" id="box1">BOX 1</div>
+    <div class="box" id="box3">BOX 2</div>
+    <div class="box" id="box2">BOX 3</div>
+</body>
+</html>

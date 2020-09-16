@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <style>
+
+    </style>
+    <script>
+             $(document).ready(function(){
+                 var size_width = $(window).width();           // tạo biến gắn cho width hiện tại của trình duyệt $("input#form_input_text").change
+               $("#size-width strong#result").text(size_width + 'px');  // gửi đến thẻ strong phương thức text gồm gtri biến sizde_width + px
+                  
+                  $(window).resize(function(){   // tạo một cái địa chỉ link từ màn hình lúc bây giờ  và sự kiện resize 
+                    var size_width = $(window).width();          // tạo biến gắn cho width hiện tại của trình duyệt $("input#form_input_text").change
+               $("#size-width strong#result").text(size_width + 'px');  // gửi đến thẻ strong phương thức text gồm gtri biến sizde_width + px
+                  })
+             });
+    </script>
+
+    <h1>Sự kiện resize trong Jquery</h1>
+    <p id="size-width">Độ rông trình duyệt : <strong id="result"></strong></p>
+</body>
+</html>

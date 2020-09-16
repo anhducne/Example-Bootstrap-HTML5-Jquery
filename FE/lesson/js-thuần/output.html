@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p>
+    Tổng : <span id="resul"></span>
+</p>
+<button onclick="total(15, 18)"> Tính Tổng </button>
+<script type="text/javascript">
+    function total(a,b){
+        // document.getElementById('resul').innerHTML = a + b ; đây là kiểu innerhtml là kiểu mà nó xuất dữ liệu ra html đang dùng mà ko che hết nội dung
+        //    document.write(a + b); là kiểu nó đè lên nội dung hiện thị - ít khi dùng 
+             window.alert(a + b);      // tạo ra thông báo từ trình duyệt
+    //     console.log(a + b); cái này thì nó xuất hiện trong cưa sổ console dùng đê test lỗi//
+    }
+</script>
+</body>
+</html>

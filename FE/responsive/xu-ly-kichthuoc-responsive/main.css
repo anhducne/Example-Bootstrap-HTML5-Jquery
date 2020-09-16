@@ -1,0 +1,33 @@
+body{
+    font-family: arial;
+    font-style: 13px;
+    line-height: 23px;
+    color: #333;
+}
+
+#wrapper{
+    width: 960px;
+    margin: 0px auto;
+}
+
+#header, #footer{
+    padding: 15px 10px;
+    background: gray;
+}
+#content, #sidebar{
+    min-height: 600px;
+    /* padding: 10px; */ 
+}
+#content{
+    /* width: 660px; set như này thì nó sẽ kbh responsive được */
+    float: left;
+    background: #f5f5f5;
+    width: 70%;  
+    /* đặt như này thì nó sẽ theo kiểu % nhưng  con wrapper vẫn set cứng width nên vẫn chưa responsive được  */
+}
+#sidebar{
+    /* width: 300px; set như này thì nó sẽ kbh responsive được */
+    float: right;
+    background: #d5d5d5;
+    width: 30%;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .cha{
+            background-color: greenyellow;
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+        .box1{
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            z-index: 1;
+        }
+        .box2{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 75px;
+            top: 75px;
+        }
+    </style>
+    <div class="cha">
+        <div class="box1">
+            Box1
+        </div>
+        <div class="box2">
+            Box2
+        </div>
+    </div>
+</body>
+</html>

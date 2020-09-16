@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-css-main/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="jquery-css-main/reset.css">
+</head>
+<body>
+    <style>
+        .wrapper *{
+            display: block;
+        }
+       .display{
+           margin: 50px;
+           width: 350px;
+           height: 350px;
+           background-color: #e74c3c;
+           text-align: center;
+       }
+       .display p{
+           font-size: 200px;
+           color: #fff;
+       }
+       .choose{
+           display: flex;
+           margin: 50px 50px;
+       }
+       a{
+           width: 80px;
+           height: 80px;
+           margin: 5px
+        }
+        a p{
+           font-size: 50px;
+           color: #fff;
+           padding-left: 27px;
+           box-sizing: border-box;
+        }
+        a#tomato{
+           background: #e74c3c;
+       }
+       a#orange{
+           background: #d35400;
+       }
+       a#green{
+           background: #27ae60;
+       }
+       a#blue{
+           background: #3498db;
+       }
+    </style>
+
+       <script>
+           // cách này là cách mình nghĩ ra đầu tiên khi bấm vào thì nó thay đổi text và css nhưng mà  theo logic thì ko đúng vì là slider sẽ mặc định là ảnh ấy nên cách này ko hợp lý 
+    $(document).ready(function(){
+        $(".choose a#tomato").click(function(){
+            $(".display p#number").text("1");
+            $(".display").css('background','#e74c3c');
+        });
+
+        $(".choose a#orange").click(function(){
+            $(".display p#number").text("2");
+            $(".display").css('background','#d35400');
+        });
+        $(".choose a#green").click(function(){
+            $(".display p#number").text("3");
+            $(".display").css('background','#27ae60');
+        });
+        $(".choose a#blue").click(function(){
+            $(".display p#number").text("4");
+            $(".display").css('background','#3498db');
+        });
+
+
+    })
+       </script>
+
+     <div class="wrapper">
+        <div class="display">
+            <p id="number"></p>
+       </div>
+
+    <div class="choose">
+        <a href="#" id="tomato"><p>1</p></a>
+        <a href="#" id="orange"><p>2</p></a>
+        <a href="#" id="green"><p>3</p></a>
+        <a href="#" id="blue"><p>4</p></a>
+    </div>
+     </div>
+</body>
+</html>

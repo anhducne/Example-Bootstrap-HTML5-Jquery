@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+      var i =  1, resul = " ", total = 1;
+      while(i<=10){
+          if(i % 2 == 1 ){  // kiểm tra chia dư để biết số lẻ hay chẵn 
+              resul += i + "</br>" ; 
+              total *= i;  // nhân các số lẻ với nhau 
+          }i++; // tăng biến lên 
+      }
+     
+      document.write(resul);
+      document.write(total + "</br>");
+    </script>
+</body>
+</html>

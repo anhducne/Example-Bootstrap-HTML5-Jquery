@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <script>
+          $(document).ready(function(){
+                   //1. Đếm số input trên from//
+            //    var num_input = $('form :input').length;   // khởi tạo 1 biến num_input và dùng .lenght để đếm các input có trong form (form :input)
+            //       alert(num_input);        // in cái biến num_input ra xem đếm được bao nhiêu 
+                  // 2. Input text ==> borderr red 
+                //   $("form :text").css('border','1px solid red');        // nó sẽ chỉ tới form mà nó có type thuộc tính là text 
+                 //3 . Input pass 
+                    //  $("form :password ").css('border', '1px solid red');  // nó sẽ chỉ tới form mà nó có type thuộc tính là text 
+                   // 4. Đếm số lượng phần tử select đã được chọn 
+                        // var input_select_selected = $("form :selected");   tạo một cái biến innput.... bằng cái giá trị trong form có mang 
+                        //                                                 biến select , sau đó biến input sẽ gọi cái .each trong đó có hàm gọi
+                        //                                                 chính cái thằng selected ra in bằng lệnh arlert, liên quan đến back end
+                        // input_select_selected.each(function(){
+                        //     alert($(this).text());
+                        // });
+
+
+          })
+    </script>
+   <style>
+       form *{
+           display: block;
+           margin-bottom: 10px;
+       }
+   </style>
+   <form action="">
+       <input type="text" name="" id="">
+       <input type="password">
+       <input type="checkbox" class="hobby" name="hobby" value="game">
+       <input type="checkbox" class="hobby" name="hobby" value="read_book">
+       <input type="checkbox" class="hobby" name="hobby" value="shopping">
+       <input type="radio">
+       <textarea name="" id="" cols="30" rows="10"></textarea>
+       <button>Nút Bấm </button>
+       <input type="submit">
+       <input type="file">
+       <select name="" id="">
+           <option value="">Lựa chọn</option>
+           <option value="">PHP</option>
+           <option value="" selected="selected">Jquery</option>
+       </select>
+    
+   </form>
+</body>
+</html>

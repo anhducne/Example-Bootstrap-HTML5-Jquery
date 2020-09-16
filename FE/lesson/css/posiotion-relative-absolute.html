@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .cha{
+            width: 350px;
+            height: 350px;
+            background-color: grey;
+            position: relative;
+        }
+        .con{
+            top: 50px;
+            left: 50px;
+            width: 250px;
+            height: 250px;
+            background-color: whitesmoke;
+            position: absolute;
+            opacity: 0;
+        }
+        .con:hover{
+            transition: 1s;
+            opacity: 1;
+        }
+    </style>
+    <div class="cha">
+        <div class="con"></div>
+    </div>
+</body>
+</html>

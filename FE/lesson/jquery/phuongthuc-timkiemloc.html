@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <style>
+    ul.sub_menu{
+        /* display: none; */
+    }
+</style>
+    <script>
+    $(document).ready(function(){
+            // 1. dùng eq để làm con thẻ p số 3 có màu đỏ (lưu ý là đếm từ 0 trở đi)
+            // $('p').eq(2).css({'color':'red', 'border':'solid 1px red'}); con này nó sẽ chỉ tới cái con trong ngoặc của eq (giá trị sẽ là 1 số count của nó từ 0 trở đi)
+            // 2. dùng not để tô màu những con thẻ không được chọn 
+            // $('p').not('.high_ligh').css({'color':'red', 'border':'solid 1px red'}); con này thì nó sẽ chọn đến tất cả các phử mà ko có class high ligh để áp dụng css  
+            // 3. dùng filter để tô màu những con có class high ligh
+            // $('p').filter('.high_ligh').css({'color':'red','border':'1px solid red'}); con này chỉ đơn giản giống con eq nhưng mà nó chỉ tới class
+            // 4. dùng thuộc tính next để tạo màu cho đoạn văn phía sau class high_ligh
+            // $('p').filter('.high_ligh').next().css({'color':'red','border':'1px solid red'});  con này thì nó phải dính vào 1 con thẻ tìm 
+            // ví dụ nếu ko có filter thì nó sẽ kiểu chọn vào hight light luôn còn có filter thì nó sẽ tìm đến class high_ligh xong đó rồi 
+            // tiếp đến next() là thẻ tiếp phía sau nó sẽ đc nhận thuộc tính là đoạn căn 3 và đoạn văn 6 
+            // 5. dùng thuộc tính nextAll để tạo màu cho tất cả đoạn văn phía sau class high_ligh
+            // $('p').filter('.high_ligh').nextAll().css({'color':'red','border':'1px solid red'}); thì thương tựthôi khi all thì nó sẽ chạy
+            // thứ tự từ trên xuống dưới và sau đó áp dụng css cho tất cả các thẻ ở dưới hết ở đây là văn bản số 3456 1 2 sẽ ko nhân gtri 
+            // // 6. tương tự dùng thuộc tính pre để tạo màu cho đoạn văn phía trước class high_ligh
+            //   $('p').filter('.high_ligh').pre().css({'color':'red','border':'1px solid red'});  nhưng mà sao nó ko chạy được í ????
+            //7. dùng thuộc tính preAll để tạo màu cho tất cả đoạn văn phía trước class high_ligh
+            // $('p').filter('.high_ligh').preAll().css({'color':'red','border':'1px solid red'});
+            // 8. dùng thuộc tính is để hiện lên thẻ high_ligh khi click vào thẻ đó 
+            //    $('p').click(function(){
+            // if($(this).is('.high_ligh')){
+            //     alert('đây là high light');
+            //    }  
+            //      })  nghĩa là nó sẽ selector đến thẻ b và dùng ckick function, xét nếu mà cái con đang bấm 'is'- là con .high_ligh thì nó sẽ
+            //          arlert cái đây là hight light ra cho, is ở đây có nghĩa như là cái đang bấm là, đấy kiểu "là - thì", thì làm gì á
+            
+            //9. dùng children để làm menu đa cấp 
+                        //  $("#main_menu li").click(function(){
+                        //  $(this).children('.sub_menu').show();
+                        //    }); thì cái con này nó sẽ đầu toeen nó sẽ tòm đến mainmenu và vào thẻ li tiếp đó là gọi hàm thì hàm này this là con
+                        //    đang được bấm đc click zô thì nếu click zô mà thằng thẻ li nó có thẻ con mà có class là sub menu thì nó sẽ dùng
+                        //    phương thức show để show ra cái thẻ đã bị hidden
+            //10. tìm tất cả thằng a con của sub_menu và thuộc tính cho nó có màu đỏ 
+            // $("#main_menu li").click(function(){
+            //  $(this).children('.sub_menu').show();
+            //  $(this).children('.sub_menu').find('a').css('color', 'red');  thì nó tương tự trên nó sẽ lòa xem trong cái submenu rồi tìm thẻ a 
+            //  trong đó và gán giá trị css cho nó à 
+            // });
+            //11. tạo màu ghi cho thẻ ul khi click vào thẻ a con  dùng parent - parent thường thì nó chỉ tìm 1 cha
+            // $("#main_menu a").click(function(){  // ở đây thì nó sẽ vào menu và tìm vào thẻ a 
+            // $(this).parent('li').parent('ul').css('background-color', 'grey'); sau đó con được bấm nếu có cha là li và có cha của li là ul 
+            //           })                                                          thì thuộc tính css cho nó 
+            //12. tạo màu ghi cho thẻ ul khi click vào thẻ a con nhưng dùng parents còn parents thì nó sẽ tìm nhiều cấp có thẻ cha đó hết thì thôi
+
+            //   $("#main_menu a").click(function(){
+            //     $(this).parents('ul').css('background-color', 'grey'); 
+            //     thì đến đây nó sẽ tìm cái bấm vào nếu cha của nó có ul thì nó sẽ cho màu grey còn cha của cha nó cũng có ul thì grey nốt
+            
+            // return false; })
+})
+</script>
+
+<!-- 
+    <p>Đoạn văn 1 </p>
+    <p class="high_ligh">Đoạn văn 2 </p>
+    <p>Đoạn văn 3 </p>
+    <p>Đoạn văn 4 </p>
+    <p class="high_ligh">Đoạn văn 5 </p>
+    <p>Đoạn văn 6 </p> -->
+
+    <ul id="main_menu">
+        <li><a href="">Menu 1</a></li>
+        <li><a href="">Menu 2</a>
+             <ul class="sub_menu">
+                 <li><a href="">Menu 2.1</a></li>
+                 <li><a href="">Menu 2.2</a></li>
+                 <li><a href="">Menu 2.3</a></li>
+                 <li><a href="">Menu 2.4</a></li>
+                 <li><a href="">Menu 2.5</a></li>
+                 <li><a href="">Menu 2.6</a></li>
+             </ul>
+        </li>
+        <li><a href="">Menu 3</a></li>
+        <li><a href="">Menu 4</a></li>
+        <li><a href="">Menu 5</a></li>
+        <li><a href="">Menu 6</a>
+            <ul class="sub_menu">
+                <li><a href="">Menu 6.1</a></li>
+                <li><a href="">Menu 6.2</a></li>
+                <li><a href="">Menu 6.3</a></li>
+                <li><a href="">Menu 6.4</a></li>
+                <li><a href="">Menu 6.5</a></li>
+                <li><a href="">Menu 6.6</a></li>
+            </ul>  
+        </li>
+        <li><a href="">Menu 7</a></li>
+        <li><a href="">Menu 8</a></li>
+    </ul>
+
+
+
+</body>
+</html>

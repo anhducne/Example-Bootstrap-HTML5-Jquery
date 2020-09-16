@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            //1. Tô màu đỏ cho trang chủ //
+            // $("a[href='home.html']").css('color','red');  // = (giá trị = value)
+           
+            //2. tô màu 333 cho các phần tử không phải trang chủ //
+            //   $("a[href!='home.html']").css('color' , 'red'); != giá trị bằng những con còn lại trừ value)
+            
+            //3. lấy tất cả menuproduct //
+            // $("a[href ^='product']").css('color','red'); (^= giá trị bắt đầu bằng value )
+            // $("a[href *='product']").css('color','red'); (*= giá trị có value )
+           
+            //   4. lấy tên sản phẩm có tên product theo sau có dấu gạc ngang 
+            // $("a[href |='product']").css('color','red')      (|= giá trị phía sau value có gạch ngang)
+            
+            // 5. tất cả menu bắt đầu bằng product thì cho màu // 
+            // $("a[href ^='product']").css('color','red'); (^= giá trị bắt đầu bằng value )
+            
+            // 6. lấy tất cả menu có clothes.html //
+            //    $("a[href $= 'clothes.html']").css('color', 'red'); ($= giá trị kết thúc bơi value)
+           
+            // 7. lấy tất cả title có từ trang và xung quanh có khoảng trắng //
+            //    $("a[title ~= 'Trang']").css('color', 'red');          (~= giá trị có chứa value và xung quanh có khoảng trắng);
+            
+            // 8. lấy tất cả menu có href cho màu đỏ //
+            //   $("a[href]").css('color', 'red');                      ($("thẻ[thuộc tính cần thay đổi]")).css('method','value');
+            
+            // 9. Lấy menu product có 2 từ trở lên
+            // $("a[href *='product'][title*=' ']").css('color', 'red'); (nghĩa là nó sẽ trỏ tới thuộc tính có value href có chứa product và thuộc tính title có khoảng trống vì có khoàng trống là có 2 từ trở lên  )
+                            })
+
+
+    </script>
+    <h1>Menu website</h1>
+
+
+    <a href="home.html" title="Trang Chủ">Trang chủ</a><br>
+    <a href="about.html" title="Giới Thiệu">Giới thiệu</a><br>
+    <a href="product-clothes.html" title="Quần Áo">Quần áo</a><br>
+    <a href="product-shoes.html" title="Giày">Giày</a><br>
+    <a href="contact.html" title="Liên Hệ">Liên hệ</a><br>
+</body>
+
+</html>

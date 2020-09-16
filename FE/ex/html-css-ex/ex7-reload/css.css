@@ -1,0 +1,97 @@
+.product-name a{
+    /* text-decoration: none; */
+
+}
+body{
+    margin: 0px;
+}
+.product{
+    width: 100%;
+   
+}
+#product-item{
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 10px 25px;
+    padding: 0px;
+}
+#product-item .item .product-infor{
+    width: 230px;
+    height: 380px;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+   border: gray 2px solid;
+   margin: 10px 10px;
+}
+#product-item .item .product-infor .product-img a img{
+    width: 230px;
+}
+#product-item .item .product-infor .product-img{
+  height: 303.13px;
+  position: relative;
+}
+#product-item .item .product-detail{
+    height: 76.87px;
+    background-color: rgba(175, 175, 175, 0.698);
+}
+#product-item .item .product-detail .product-name{
+    margin: 0px;
+}
+#product-item .item .product-detail .price-box p:hover{
+    transition: 1s;
+    color: blue;
+    font-weight: bold;
+}
+#product-item .item .product-detail .price-box span{
+  font-weight: bold;
+  color: crimson;
+  opacity: 0;
+  font-size: 18px;
+}
+#product-item .item .product-detail .price-box:hover span {
+    transition: 1s;   
+    opacity: 1;
+    padding-left: 55px;
+
+}
+#product-item .item .product-detail .product-name a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: segoe ui;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    color: orangered;
+}
+#product-item .item .product-detail .price-box p{
+    text-align: center;
+    margin: 0px ;
+  
+}
+#product-item .item .product-infor .product-img a img.a2{
+    opacity: 1;
+    position: absolute;
+    z-index: 0;
+}
+#product-item .item .product-infor .product-img a img.a1{
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
+}
+#product-item .item .product-infor .product-img a img.a1:hover{
+    opacity: 0;
+    transition: 0.8s;
+}
+#product-item .item .product-infor .product-img a img.a2:hover{
+    opacity: 1;
+    transition: 0.8s;
+}
+
+.header{
+    text-align: center;
+    color: white;
+    background-color: purple;
+}

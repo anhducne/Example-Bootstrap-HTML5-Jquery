@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <style>
+        form *{
+             display: block;
+             margin: 5px 0px 10px;
+        }
+    </style>
+    <script>
+         $(document).ready(function(){
+        //    chạy vào cái form 
+            $('#form_login').submit(function(){
+             //  1. nhập tên và pass xong đó bấm submit thì nó sẽ arlert ra thông báo cái mk và tên dn 
+            //    var username = $('#username').val();
+            //    var password = $('#pass').val();
+            //    alert(username + ' - ' + password);         
+            //    return false;                         thì đầu tiên là nó sẽ link đến cái form bằng cái id của form ấy xong rồi dùng thuộc tính
+            // sub mit ddeer submit function xong đó nó tạo ra 2 biến username và passworrd gán giá trị của cái người dùng nhập vào cho 2 biến đó
+            // bằng thuộc tính val() xog rồi arlert ra thôi :V hết 
+            // 2. nhập tên và pass xong bấm sub mit thì nó sẽ đẩy tên và pass về cái html phía dưới 
+            //    var username = $('#username').val();
+            //    var password = $('#pass').val();
+
+            //    $('#val_username').text(username);
+            //    $('#val_password').text(password);
+            //    return false;                     
+            //    thì tương tự phía trên thôi sau đó nó sẽ selector cái con id=val_username xong đó lấy cái giá trị của biến username gán vào cái
+            //    html đó bằng phương thức text ( nhưng mà set css cho cẩn thận ko chứ lại kiểu bị chèn hiddeen hết giá trị )
+            // 3. nhập tên và pass xong bấm sub mit thì nó sẽ đẩy tên và pass về cái html phía dưới nhưng khác là cái thẻ p nó sẽ bị ẩn đi 
+                //   bấm vào thì nó mới hiện ra  
+                  var username = $('#username').val();
+                  var password = $('#pass').val();
+
+            var str_result;
+
+            str_result = "<p>User Name : <strong id='val_username'>"+username+"</strong></p><p>Password : <strong id='val_password'>"+password+"</strong></p>" // nhớ cho giá trị của username vs pass khi người dùng vào khi bấm submit
+            //    cái này là tạo 1 biến str resul xong đó nó sẽ bưng cái cục phía dưới html vào và bằng giá trị cái biến đó lưu ý là các 
+            //    dấu 2 nháy thì để về 1 nháy và được bao ngoài bởi dấu 2 nháy và cả cụm giá trị html phải nằm trên một hàng 
+                 $('.resul').html(str_result);
+                 // nó sẽ đẩy cái giá trị cỉa biến str resul vào cái thẻ div là 1 cụm html kèm theo là giá trị người dùng nhập vào 
+                 return false;
+            })
+         })
+    </script>
+    <form action="" id="form_login" method="POST">
+        <label for="username">User Name</label>
+        <input type="text" id="username" name="username" value="">
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="pass" value="">
+        <input type="submit" name="sm_login" value="Đăng Nhập">
+
+         <div class="resul">
+
+         </div>
+        <!-- 
+        <p>User Name : <strong id="val_username"></strong></p>
+        <p>Password : <strong id="val_password"></strong></p> -->
+    </form>
+</body>
+</html>

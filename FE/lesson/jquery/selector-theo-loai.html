@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+               //1. first of type 
+            // $(".box a:first-of-type").css('color','red');  // nghĩa là kiểu lấy con thẻ a đầu tiên trong khối box 
+               //2. lasst of type
+            //    $(".box a:last-of-type").css('color','red');   // nghĩa là lấy con thẻ a cuối cùng trong khối box 
+            //3.only-of-type
+              $(".box a:only-of-type").css('color','red');   // chọn thẻ a duy nhất trong khối box thì ai to nó chỉ đến link 5
+        })
+    </script>
+    <div class="box">
+        <a href="">Link 1</a>
+        <p>Văn bản 1</p>
+        <h1>Tiêu đề 1 </h1>
+
+        <a href="">Link 2</a>
+        <p>Văn bản 2</p>
+        <h1>Tiêu đề 2 </h1>
+
+        <a href="">Link 3</a>
+        <p>Văn bản 3</p>
+        <h1>Tiêu đề 3 </h1>
+
+        <a href="">Link 4</a>
+        <p>Văn bản 4</p>
+        <h1>Tiêu đề 4 </h1>
+
+    <div class="box">
+        <a href="">Link 5</a>
+        <p>Văn bản 5</p>
+        <h1>Tiêu đề 5 </h1>
+    </div>   
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <style>
+         input, select, textarea {
+             display: block;
+             margin: 10px 10px;
+         }
+    </style>
+
+    <script> 
+          $(document).ready(function(){
+                    // lấy giá trị liên tuc ở trong form chứ con val bth thì bấm submit nó ms nảy giá trị còn con này bỏ chuột ra khỏi ô là nó lấy luôn
+                  $("input#form_input_text").change(function(){
+                       alert($(this).val());
+                  });
+                  $("select#form_select").change(function(){
+                       alert($(this).val());
+                  });
+                  $("textarea#form_textarea").change(function(){
+                       alert($(this).val());
+                  });
+                // tạo 1 con other khi click thì nó khởi chạy vào con change input
+                $("#other").click(function(){
+                    $("input#form_input_text").change();
+                    return false;
+                });
+          });
+    </script>
+
+    <h1> Sự kiện change trong jquery </h1>
+    <form action="" method="POST">
+        <input type="text" id="form_input_text" name="form_input_text">
+        <select name="" id="form_select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <textarea name="form_textarea" id="form_textarea" cols="30" rows="10"></textarea>
+    </form>
+    <a href="#" id="other">other</a>
+</body>
+</html>
